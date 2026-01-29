@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes rem/em + mobile behave properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CCB - Contact</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div class="contentMain">
+
+  <!-- Header -->
+  <header class="itemMain">
   
-  <body>
-    <h1 class="centered">Charlie Blaker - 3D Technical Artist</h1>
-    <h2 class="centered">Contact Info</h2>
+    <ul class="headerTitle">
+      <li class="titleItem"><img class="logo" src="/branding/logo_onblack.svg" alt="Iris"><li>
+      <li class="titleItem"><h1>CCBlaker</h1><li>
+      <li class="titleItem"><h2 class="centered">About Me</h2><li>
+    </ul>
     
-    <nav class="headerbar">
-      <ul class="headerLinks">
-        <li><img src="/branding/logo_onblack.svg"></li>
+    <div class="spacer">
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navLinks">
+      <ul class="headerBar">
         <li><a href="/">Home</a></li>
-        <li><a href="/pages/3Dwork.html">3D</a></li>
-        <li><a href="/pages/programming.html">Programming</a></li>        
-        <li><a href="/pages/sketchbook.html">Sketchbook</a></li>
-        <li><a href="/pages/contact.html">Contact</a></li>
+        <li><a href="3DArt.html">3D Art</a></li>
+        <li><a href="TechArt.html">Tech Art</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="sketchbook.html">Sketchbook</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </body>
+    
+  </header>
+
+  <!-- Main -->
+  <main class="itemMain">
+  
+    <section class="centered">
+      <p>Contact info on top name, age, main email, ect. Links to my github, linkedin, artstation, and other socials.
+      general information and blurbs about me, what I do, what I like, other fun stuff near the bottom. Plus a picture<p>
+      <img class="fitImg" src="/sample/Resume.png">
+      
+      <div class="seperator">
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="itemMain">
+  
+    <p class="centered">
+      © 2026 Charlie Blaker
+    </p>
+    
+  </footer>
+  
+</div>
+</body>
 </html>
