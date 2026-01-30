@@ -49,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   
-  width: 80%;
+  width: 100%;
   max-width: 80rem;
   
   margin: 0 auto;
