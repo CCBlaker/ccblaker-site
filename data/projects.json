@@ -1,0 +1,26 @@
+{
+    "categories": [
+        {
+            "name": "3D Art",
+            "slug": "art3d",
+            "projects": [
+                {
+                    "title": "Fractal",
+                    "slug": "fractal",
+                    "path": "art/art3d/fractal/"
+                }
+            ]
+        },
+        {
+            "name": "Programming",
+            "slug": "programming",
+            "projects": [
+                {
+                    "title": "Console Concepts",
+                    "slug": "console-concepts",
+                    "path": "art/programming/console-concepts"
+                }
+            ]
+        }
+    ]
+}
