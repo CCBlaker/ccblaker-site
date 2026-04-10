@@ -1,5 +1,5 @@
 function loadCategory(categorySlug) {
-    fetch('/ccblaker-site/data/projects.json')
+    fetch('/data/projects.json')
         .then(res => res.json())
         // .then(text => {
         //     console.log(text);
@@ -9,19 +9,19 @@ function loadCategory(categorySlug) {
             const container = document.getElementById('projects');
 
             category.projects.forEach(project => {
-                fetch('/ccblaker-site/' + project.path + 'data.json')
+                fetch(project.path + 'data.json')
                   .then(res => res.json())
                   .then(projData => {
                     const div = document.createElement('div');
 
-                    const mediaPath = '/ccblaker-site/' + project.path + projData.media;
+                    const mediaPath = project.path + projData.media;
 
                     div.innerHTML = `
                         <div class="card">
                             
                             <div class="container">
                                 
-                                <a href="/ccblaker-site/project.html?proj=${project.slug}">
+                                <a href="/project.html?proj=${project.slug}">
                                     <img src="${mediaPath}" alt="${project.alt} class="thumbnail"/>
                                 </a>
                             </div>
@@ -44,7 +44,7 @@ function loadProject() {
         console.error("No project slug in URL");
     }
 
-    fetch('/ccblaker-site/data/projects.json')
+    fetch('/data/projects.json')
       .then(res => res.json())
       .then(data => {
         let foundProject;
