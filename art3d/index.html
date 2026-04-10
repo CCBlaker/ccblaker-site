@@ -13,13 +13,14 @@
 </head>
 
 <body>
+  
 <div class="contentMain">
 
   <!-- Header -->
   <header class="itemMain">
   
     <ul class="headerTitle">
-      <li class="titleItem"><img class="logo" src="../_branding/logo_onblack.svg" alt="Iris"><li>
+      <li class="titleItem"><img class="logo" src="/ccblaker-site/_branding/logo_onblack.svg" alt="Iris"><li>
       <li class="titleItem"><h1>CCBlaker</h1><li>
       <li class="titleItem"><h2 class="centered">3D Artwork</h2><li>
     </ul>
@@ -46,7 +47,7 @@
   
     <section class="centered">
       <p> 3D Artwork such as environment art, sculpting, hard surface modeling, texturing, ect<p>
-      <img class="fitImg" src="../_sample/UnderwaterLava.png">
+      <img class="fitImg" src="/ccblaker-site/_sample/UnderwaterLava.png">
       
       <div class="seperator">
       </div>
@@ -55,12 +56,14 @@
       <h2>Example</h2>
       <div id = "projects"></div>
     </section>
-
+    <script src="/ccblaker-site/script.js" defer></script>
     <script>
-      loadCategory('art3d');
+      document.addEventListener('DOMContentLoaded', () => {
+        loadCategory('art3d');
+      });
     </script>
 
-    <script src="../script.js"></script>
+    
   </main>
 
   <!-- Footer -->

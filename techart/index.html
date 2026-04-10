@@ -6,22 +6,23 @@
   <!-- Makes rem/em + mobile behave properly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CCB - Techart</title>
+  <title>CCB - 3D</title>
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="/ccblaker-site/style.css">
 </head>
 
 <body>
+  
 <div class="contentMain">
 
   <!-- Header -->
   <header class="itemMain">
   
     <ul class="headerTitle">
-      <li class="titleItem"><img class="logo" src="./_branding/logo_onblack.svg" alt="Iris"><li>
+      <li class="titleItem"><img class="logo" src="/ccblaker-site/_branding/logo_onblack.svg" alt="Iris"><li>
       <li class="titleItem"><h1>CCBlaker</h1><li>
-      <li class="titleItem"><h2 class="centered">Tech Art Tools</h2><li>
+      <li class="titleItem"><h2 class="centered">3D Artwork</h2><li>
     </ul>
     
     <div class="spacer">
@@ -32,7 +33,7 @@
       <ul class="headerBar">
         <li><a href="/ccblaker-site/index.html">Home</a></li>
         <li><a href="/ccblaker-site/art3d/">3D Art</a></li>
-        <li><a href="/ccblaker-site/techart" class="active">Tech Art</a></li>
+        <li><a href="/ccblaker-site/techart">Tech Art</a></li>
         <li><a href="/ccblaker-site/programming">Programming</a></li>
         <li><a href="/ccblaker-site/sketchbook">Sketchbook</a></li>
         <li><a href="/ccblaker-site/contact">Contact</a></li>
@@ -45,12 +46,23 @@
   <main class="itemMain">
   
     <section class="centered">
-      <p> My tech-art work such as shaders, materials, simulations, and procedrual geometry.<p>
-      <img class="fitImg" src="./_sample/CrystalShader.png">
+      <p> 3D Artwork such as environment art, sculpting, hard surface modeling, texturing, ect<p>
+      <img class="fitImg" src="/ccblaker-site/_sample/UnderwaterLava.png">
       
       <div class="seperator">
       </div>
     </section>
+    <section>
+      <h2>Example</h2>
+      <div id = "projects"></div>
+    </section>
+    <script src="/ccblaker-site/script.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        loadCategory('techart');
+      });
+    </script>
+
     
   </main>
 
