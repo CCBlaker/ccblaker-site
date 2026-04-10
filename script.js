@@ -1,9 +1,9 @@
 function loadCategory(categorySlug) {
     fetch('/data/projects.json')
         .then(res => res.json())
-        // .then(text => {
-        //     console.log(text);
-        // })
+        .then(text => {
+            console.log(text);
+        })
         .then(data => {
             const category = data.categories.find(c => c.slug === categorySlug);
             const container = document.getElementById('projects');
