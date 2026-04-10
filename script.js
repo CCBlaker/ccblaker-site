@@ -9,7 +9,7 @@ function loadCategory(categorySlug) {
             const container = document.getElementById('projects');
 
             category.projects.forEach(project => {
-                fetch(project.path + 'data.json')
+                fetch('/' + project.path + 'data.json')
                   .then(res => res.json())
                   .then(projData => {
                     const div = document.createElement('div');
