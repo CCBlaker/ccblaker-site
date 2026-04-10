@@ -3,6 +3,7 @@ function loadCategory(categorySlug) {
         .then(res => res.json())
         .then(text => {
             console.log(text);
+            return text;
         })
         .then(data => {
             const category = data.categories.find(c => c.slug === categorySlug);
@@ -22,7 +23,7 @@ function loadCategory(categorySlug) {
                             <div class="container">
                                 
                                 <a href="/project.html?proj=${project.slug}">
-                                    <img src="${mediaPath}" alt="${project.alt} class="thumbnail"/>
+                                    <img src="${mediaPath}" alt="${project.alt}" class="thumbnail"/>
                                 </a>
                             </div>
                         </div>
