@@ -57,7 +57,7 @@ function loadProject() {
             });
         });
 
-        const basePath = '/ccblaker-site/' + foundProject.path;
+        const basePath = foundProject.path;
 
         fetch(basePath + 'data.json')
           .then(res => res.json())
