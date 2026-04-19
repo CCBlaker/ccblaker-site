@@ -19,7 +19,7 @@ function loadCategory(categorySlug) {
 
                     div.innerHTML = `
                         <div class="card">
-                            <a href="/project.hmtl?proj=${project.slug}">
+                            <a href="/project.html?proj=${project.slug}">
 
                                 <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
 
@@ -31,6 +31,9 @@ function loadCategory(categorySlug) {
                                 </div>
                             </a>
                         </div>
+                            
+                        
+                        
                     `;
 
                     container.appendChild(div);
