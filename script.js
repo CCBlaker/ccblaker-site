@@ -19,15 +19,18 @@ function loadCategory(categorySlug) {
 
                     div.innerHTML = `
                         <div class="card">
-                            
-                            <div class="container">
-                                
-                                <a href="/project.html?proj=${project.slug}">
-                                    <img src="${mediaPath}" alt="${project.alt}" class="thumbnail"/>
-                                </a>
-                            </div>
+                            <a href="/project.hmtl?proj=${project.slug}">
+
+                                <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
+
+                                <div class="overlay">
+                                    <div class="overlayText">
+                                        <h3>${projData.title}</h3>
+                                        <p>${projData.description}</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        
                     `;
 
                     container.appendChild(div);
