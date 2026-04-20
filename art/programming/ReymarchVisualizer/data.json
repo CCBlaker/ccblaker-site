@@ -3,8 +3,8 @@
     "date": "2025",
 
     "main": {
-        "type": "video",
-        "src": "Main.mp4"
+        "type": "image",
+        "src": "Alt1.png"
     },
 
     "repo": "https://www.shadertoy.com/view/W3yfDW",
@@ -12,8 +12,8 @@
 
     "gallery": [
         {
-            "type": "image",
-            "src": "Alt1.png"
+            "type": "video",
+            "src": "Main.mp4"
         },
         {
             "type": "image",
