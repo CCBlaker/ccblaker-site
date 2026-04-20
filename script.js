@@ -10,7 +10,7 @@ function loadCategory(categorySlug) {
             const container = document.getElementById('projects');
 
             category.projects.forEach(project => {
-                fetch('../' + project.path + 'data.json')
+                fetch('/' + project.path + 'data.json')
                   .then(res => res.json())
                   .then(projData => {
                     const div = document.createElement('div');
@@ -54,7 +54,7 @@ function loadProject() {
         console.error("No project slug in URL");
     }
 
-    fetch('../data/projects.json')
+    fetch('/data/projects.json')
       .then(res => res.json())
       .then(data => {
         let foundProject;
@@ -67,7 +67,7 @@ function loadProject() {
             });
         });
 
-        const basePath = '../' + foundProject.path;
+        const basePath = '/' + foundProject.path;
 
         fetch(basePath + 'data.json')
           .then(res => res.json())
@@ -101,7 +101,7 @@ function loadProject() {
                 <p class="date">${projData.date}</p>
 
                 <div class="mainMedia">
-                    ${mainMedia}
+                    ${projData.main.src}
                 </div>
 
                 <p class = "description">${projData.description}</p>
