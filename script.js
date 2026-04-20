@@ -15,7 +15,7 @@ function loadCategory(categorySlug) {
                   .then(projData => {
                     const div = document.createElement('div');
 
-                    const mediaPath = '/' + project.path + projData.media;
+                    const mediaPath = '/' + project.path + projData.main.src;
 
                     div.innerHTML = `
                         <div class="card">
