@@ -195,6 +195,7 @@ section {
 
 .card {
   position: relative;
+  display: block;
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
   overflow: hidden;

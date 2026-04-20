@@ -140,8 +140,8 @@ function resizeGridItem(item) {
     const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
     const rowGap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
 
-    const img = item.querySelector('.thumbnail');
-    const height = img.getBoundingClientRect().height;
+    
+    const height = item.getBoundingClientRect().height;
 
     const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
     item.style.gridRowEnd = "span "+rowSpan;
@@ -168,6 +168,6 @@ window.addEventListener('resize', () => {
     });
 });
 
-window.addEventListener('load', () => {
-    document.querySelectorAll('.card').forEach(resizeGridItem);
-});
+img.onload = () => {
+    requestAnimationFrame(() => resizeGridItem(div));
+};
