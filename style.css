@@ -5,6 +5,7 @@ html {
 
 html, body {
   overflow-x: hidden;
+  height: auto;
 }
 
 :root {
@@ -29,8 +30,8 @@ main {
   border: var(--border-container) solid var(--text-main);
   padding: 1.5rem;
 
-  overflow-x: hidden;
-  overflow-y: visible;
+  
+  overflow: visible;
 }
 
 body {
@@ -215,7 +216,7 @@ section {
   display: block;
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
-  overflow: hidden;
+  
   min-width: 0;
   align-self: start;
 }
@@ -223,7 +224,7 @@ section {
 .card a {
   display: block;
   width: 100%;
-  height: 100%;
+  
 }
 
 
