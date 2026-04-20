@@ -79,6 +79,11 @@ function loadProject() {
                 mediaHTML = `<img src="${basePath + projData.main.src}" />`;
             }
 
+            repoHTML = '';
+            if(projData.repo) {
+                repoHTML = `<a href="${projData.repo}" target="_blank">View Code Repository</a>`;
+            }
+
             galleryHTML = '';
             if (projData.gallery && projData.gallery.length > 0) {
                 galleryHTML = '<div class="gallery">';
@@ -109,6 +114,7 @@ function loadProject() {
             container.innerHTML = `
                 <h1>${projData.title}</h1>
                 <p class="date">${projData.date}</p>
+                ${repoHTML}
 
                 <div class="mainMedia">
                     ${mediaHTML}
