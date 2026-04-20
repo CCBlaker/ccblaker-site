@@ -31,7 +31,10 @@ main {
   padding: 1.5rem;
 
   
-  overflow: visible;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  flex: none;
 }
 
 body {
@@ -44,6 +47,9 @@ body {
   border: var(--border-outer) solid var(--text-main);
   padding: 2rem;
   margin: 1rem;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
 }
 
 header h1 {
