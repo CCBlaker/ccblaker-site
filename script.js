@@ -22,7 +22,7 @@ function loadCategory(categorySlug) {
                                 <div class="overlay">
                                     <div class="overlayText">
                                         <h3>${projData.title}</h3>
-                                        <p>${projData.description}</p>
+                                        
                                     </div>
                                 </div>
                             </a>
@@ -114,7 +114,7 @@ function loadProject() {
             }
 
             container.innerHTML = `
-                <h1>${projData.title}</h1>
+                <h2>${projData.title}</h2>
                 <p class="date">${projData.date}</p>
                 ${repoHTML}
 
@@ -125,7 +125,6 @@ function loadProject() {
                 <h3 class = "description">${projData.description}</h3>
                 ${galleryHTML}
                 <div class="process">
-                    <h2>Process</h2>
                     <p>${projData.process}</p>
                 </div>
                 
