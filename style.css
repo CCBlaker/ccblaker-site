@@ -29,7 +29,8 @@ main {
   border: var(--border-container) solid var(--text-main);
   padding: 1.5rem;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 body {
@@ -216,6 +217,7 @@ section {
   background: var(--bg-main);
   overflow: hidden;
   min-width: 0;
+  align-self: start;
 }
 
 .card a {
@@ -235,7 +237,8 @@ section {
   grid-auto-rows: 10px;
   gap: 1rem;
   align-items: start;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 #project {
