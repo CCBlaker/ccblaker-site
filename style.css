@@ -150,16 +150,11 @@ body {
 
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
 .container {
   padding: 2px 16px;
@@ -167,26 +162,29 @@ body {
 
 #projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px;
   gap: 1rem;
 }
 
 .thumbnail {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.75);
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+  
   color: white;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   text-align: center;
 
   opacity: 0;
@@ -195,8 +193,22 @@ body {
 
 .overlayText {
   padding: 1rem;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
 
 .card:hover .overlay {
   opacity: 1;
+}
+
+.card:hover .overlayText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .thumbnail {
+  transform: scale(1.05);
 }

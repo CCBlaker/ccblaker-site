@@ -26,7 +26,7 @@ function loadCategory(categorySlug) {
                                 <div class="overlay">
                                     <div class="overlayText">
                                         <h3>${projData.title}</h3>
-                                        <p>${projData.description}</p>
+                                        <p>${projData.blurb}</p>
                                     </div>
                                 </div>
                             </a>
@@ -37,6 +37,9 @@ function loadCategory(categorySlug) {
                     `;
 
                     container.appendChild(div);
+
+                    const img = div.querySelector('img');
+                    img.onload = () => resizeGridItem(div);
                   });
             });
         });
@@ -87,3 +90,41 @@ function loadProject() {
           });
       });
 }
+
+function resizeGridItem(item) {
+    const grid = document.getElementById('projects');
+
+    const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
+
+    const img = item.querySelector('.thumbnail');
+    const height = img.getBoundingClientRect().height;
+
+    const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+}
+
+function loadComponent(id,path){
+    fetch(path)
+        .then(res=>res.text())
+        .then(html => {
+            document.getElementById(id).innerHTML = html;
+        })
+        .catch(err=>console.error(`Failed to load ${path}:`, err));
+}
+
+
+window.addEventListener('resize', () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const img = card.querySelector('img');
+
+        if(img.complete) {
+            resizeGridItem(card);
+        }
+    });
+});
+
+window.addEventListener('load', () => {
+    document.querySelectorAll('.card').forEach(resizeGridItem);
+});

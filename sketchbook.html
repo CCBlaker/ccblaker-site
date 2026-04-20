@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes rem/em + mobile behave properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CCB - Sketchbook</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  
+<div class="contentMain">
+
+  <!-- Header -->
+  <header id="navbar"></header>
+
+  <!-- Main -->
+  <main class="itemMain">
+  
+    <section class="centered">
+      <p>Silly Sketchbook information<p>
+      <!-- <img class="fitImg" src="/_sample/UnderwaterLava.png"> -->
+      
+      <div class="seperator">
+      </div>
+    </section>
+    <section>
+      <h2>Example</h2>
+      <div id = "projects"></div>
+    </section>
+    
+
+    
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  
+</div>
+</body>
+<script src="/script.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        loadComponent('navbar','/components/navbar.html');
+        loadComponent('footer', '/components/footer.html');
+        loadCategory('sketchbook');
+      });
+    </script>
+</html>
