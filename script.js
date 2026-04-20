@@ -101,7 +101,7 @@ function loadProject() {
             }
             previsHTML = '';
             if (projData.previs && projData.previs.length > 0) {
-                previsHTML = '<div class="previs"><h2>Previsualization</h2>';
+                previsHTML = '<div class="previs">';
 
                 projData.previs.forEach(item => {
                     if(item.type === 'video') {

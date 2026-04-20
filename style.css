@@ -244,8 +244,9 @@ section {
   grid-auto-rows: 10px;
   gap: 1rem;
   align-items: start;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: visible !important;
+  height: auto !important;
+  
 }
 
 #project {
