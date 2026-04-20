@@ -73,9 +73,9 @@ function loadProject() {
             let mediaHTML = '';
 
             if(projData.type === 'video') {
-                mediaHTML = `<video controls src="${basePath + projData.main.src}" />`;
+                mediaHTML = `<video controls src="${'/'+basePath + projData.main.src}" />`;
             } else {
-                mediaHTML = `<img src="${basePath + projData.main.src}" />`;
+                mediaHTML = `<img src="${'/'+basePath + projData.main.src}" />`;
             }
 
             galleryHTML = '';
