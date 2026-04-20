@@ -2,6 +2,10 @@
     "title": "Fractal",
     "date": "2026-4-20",
 
+    "thumb": {
+        "type": "image",
+        "src": "Fractal.png"
+    },
     "main": {
         "type": "image",
         "src": "Fractal.png"
@@ -11,6 +15,23 @@
     "description": "Fractal with example stuff idk what I'm writing",
 
     "gallery": [
+        {
+            "type": "image",
+            "src": "Fractal.png",
+            "alt": "Fractal Image"
+        },
+        {
+            "type": "image",
+            "src": "Fractal.png",
+            "alt": "Fractal Image"
+        },
+        {
+            "type": "image",
+            "src": "Fractal.png",
+            "alt": "Fractal Image"
+        }
+    ],
+    "previs": [
         {
             "type": "image",
             "src": "Fractal.png",

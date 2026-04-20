@@ -2,22 +2,18 @@
     "title": "Misson Control Environment",
     "date": "2024",
 
-    "main": {
+    "thumb": {
         "type": "image",
         "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
     },
 
     "description": "lorum ipsum",
 
     "gallery": [
-        {
-            "type": "video",
-            "src": "Main.mp4"
-        },
-        {
-            "type": "image",
-            "src": "Progress1.png"
-        },
         {
             "type": "image",
             "src": "Alt1.png"
@@ -33,6 +29,12 @@
         {
             "type": "image",
             "src": "Alt4.png"
+        }
+    ],
+    "previs": [
+        {
+            "type": "image",
+            "src": "Progress.png"
         }
     ],
     "process": "lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

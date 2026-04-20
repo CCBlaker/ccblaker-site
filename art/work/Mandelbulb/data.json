@@ -2,18 +2,18 @@
     "title": "Mandelbulb",
     "date": "2023",
 
-    "main": {
+    "thumb": {
         "type": "image",
         "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
     },
 
     "description": "3D Fractal Surface Renderer for Blender",
 
     "gallery": [
-        {
-            "type": "video",
-            "src": "Main.mp4"
-        },
         {
             "type": "image",
             "src": "Alt1.png"
@@ -27,5 +27,6 @@
             "src": "Alt3.png"
         }
     ],
+    "previs": [],
     "process": "Coded with Open Shading Language and implemented in Blender, this fractal was made with a hybrid Script/Node Setup inside Blender. It uses Raymarching with Signed Distance fields to generate the fractal on the surface of an arbitrary shape, taking the derivative of this signed distance to get the surface normals, which are plugged into the standard BSDF, allowing the fractal to be shaded accurately."
 }

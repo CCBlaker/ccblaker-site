@@ -11,7 +11,7 @@ function loadCategory(categorySlug) {
                   .then(projData => {
                     const div = document.createElement('div');
 
-                    const mediaPath = '/' + project.path + projData.main.src;
+                    const mediaPath = '/' + project.path + projData.thumb.src;
 
                     div.innerHTML = `
                         <div class="card">
@@ -64,7 +64,7 @@ function loadProject() {
         });
 
         const basePath = '/' + foundProject.path;
-        console.log("Loading project from path:", basePath);
+        
 
         fetch(basePath + 'data.json')
           .then(res => res.json())
@@ -92,6 +92,19 @@ function loadProject() {
                 });
                 galleryHTML += '</div>';
             }
+            previsHTML = '';
+            if (projData.previs && projData.previs.length > 0) {
+                previsHTML = '<div class="previs"><h2>Previsualization</h2>';
+
+                projData.previs.forEach(item => {
+                    if(item.type === 'video') {
+                        previsHTML += `<video controls src="${basePath + item.src}" />`;
+                    } else {
+                        previsHTML += `<img src="${basePath + item.src}" />`;
+                    }
+                });
+                previsHTML += '</div>';
+            }
 
             container.innerHTML = `
                 <h1>${projData.title}</h1>
@@ -101,12 +114,14 @@ function loadProject() {
                     ${mediaHTML}
                 </div>
 
-                <p class = "description">${projData.description}</p>
+                <h3 class = "description">${projData.description}</h3>
                 ${galleryHTML}
                 <div class="process">
                     <h2>Process</h2>
                     <p>${projData.process}</p>
                 </div>
+                
+                ${previsHTML}
                 `;
             
           });

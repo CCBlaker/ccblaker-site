@@ -2,6 +2,10 @@
     "title": "Console Concepts",
     "date": "2026-4-20",
 
+    "thumb": {
+        "type": "image",
+        "src": "ConsoleConcepts.png"
+    },
     "main": {
         "type": "image",
         "src": "ConsoleConcepts.png"
@@ -11,6 +15,23 @@
     "description": "Console Concepts",
 
     "gallery": [
+        {
+            "type": "image",
+            "src": "ConsoleConcepts.png",
+            "alt": "Console Concepts Image"
+        },
+        {
+            "type": "image",
+            "src": "ConsoleConcepts.png",
+            "alt": "Console Concepts Image"
+        },
+        {
+            "type": "image",
+            "src": "ConsoleConcepts.png",
+            "alt": "Console Concepts Image"
+        }
+    ],
+    "previs": [
         {
             "type": "image",
             "src": "ConsoleConcepts.png",
