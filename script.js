@@ -97,7 +97,7 @@ function loadProject() {
                 <p class="date">${projData.date}</p>
 
                 <div class="mainMedia">
-                    ${projData.main.src}
+                    ${mediaHTML}
                 </div>
 
                 <p class = "description">${projData.description}</p>
