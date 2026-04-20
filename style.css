@@ -355,7 +355,7 @@ section {
 
 .headerBar {
   display: flex;
-  width: 100%;
+  width: 75%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -377,6 +377,10 @@ section {
 .headerBar a:hover {
   border-color: var(--text-main);
   background: rgba(255, 255, 255, 0.05);
+}
+
+footer{
+  width: 75%;
 }
 
 *, *::before,
