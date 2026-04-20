@@ -195,10 +195,17 @@ section {
 
 .card {
   position: relative;
+  width: 100%;
   display: block;
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
   overflow: hidden;
+}
+
+.card a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -208,10 +215,10 @@ section {
 
 #projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-auto-rows: 10px;
-  gap: 1.2rem;
-
+  gap: 1rem;
+  align-items: start;
   
 }
 
@@ -342,3 +349,8 @@ section {
   border-color: var(--text-main);
   background: rgba(255, 255, 255, 0.05);
 }
+
+*, *::before,
+ *::after {
+   box-sizing: border-box;
+ }
