@@ -35,7 +35,9 @@ function loadCategory(categorySlug) {
                     container.appendChild(div);
 
                     const img = div.querySelector('img');
-                    img.onload = () => resizeGridItem(div);
+                    img.onload = () => {
+                        requestAnimationFrame(() => resizeGridItem(div));
+                    };
                   });
             });
         });
@@ -168,6 +170,6 @@ window.addEventListener('resize', () => {
     });
 });
 
-img.onload = () => {
-    requestAnimationFrame(() => resizeGridItem(div));
-};
+window.addEventListener('load', () => {
+    document.querySelectorAll('.card').forEach(resizeGridItem);
+});
