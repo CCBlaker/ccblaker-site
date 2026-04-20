@@ -9,61 +9,56 @@
   <title>CCB - Contact</title>
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
+  
 <div class="contentMain">
 
   <!-- Header -->
-  <header class="itemMain">
-  
-    <ul class="headerTitle">
-      <li class="titleItem"><img class="logo" src="../_branding/logo_onblack.svg" alt="Iris"><li>
-      <li class="titleItem"><h1>CCBlaker</h1><li>
-      <li class="titleItem"><h2 class="centered">About Me</h2><li>
-    </ul>
-    
-    <div class="spacer">
-    </div>
-    
-    <!-- Navigation Bar -->
-    <nav class="navLinks">
-      <ul class="headerBar">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../art3d/">3D Art</a></li>
-        <li><a href="../techart">Tech Art</a></li>
-        <li><a href="../programming">Programming</a></li>
-        <li><a href="../sketchbook">Sketchbook</a></li>
-        <li><a href="../contact" class="active">Contact</a></li>
-      </ul>
-    </nav>
-    
-  </header>
+  <header id="navbar"></header>
 
   <!-- Main -->
   <main class="itemMain">
   
     <section class="centered">
-      <p>Contact info on top name, age, main email, ect. Links to my github, linkedin, artstation, and other socials.
-      general information and blurbs about me, what I do, what I like, other fun stuff near the bottom. Plus a picture<p>
-      <img class="fitImg" src="../_sample/Resume.png">
-      
+      <h1>About Me</h1>
+      <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <ul>
+        <li>Email:</li>
+        <li>Phone:</li>
+        <li>LinkedIn:</li>
+        <li>GitHub:</li>
+      </ul>
+
       <div class="seperator">
       </div>
+      <p>Feel free to reach out to me through any of the above methods! I'm always open to discussing new projects, collaborations, or just connecting with like-minded individuals.</p>
+      <p>Thank you for visiting my portfolio, and I look forward to hearing from you!</p>
+
+      <p>cats and stuff</p>
+      <p>image etc</p>
+      <p>so this is just some html in contact.html, so edit it however you want to add more information etc. if you're putting pictures i suggest making a image folder to put those in. love you nerd.</p>
     </section>
+    
+    
+
     
   </main>
 
   <!-- Footer -->
-  <footer class="itemMain">
-  
-    <p class="centered">
-      © 2026 Charlie Blaker
-    </p>
-    
-  </footer>
+  <div id="footer"></div>
   
 </div>
+<script src="/script.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        loadComponent('navbar','/components/navbar.html');
+        loadComponent('footer', '/components/footer.html');
+        
+      });
+</script>
 </body>
+
 </html>

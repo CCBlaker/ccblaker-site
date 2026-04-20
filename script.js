@@ -26,7 +26,7 @@ function loadCategory(categorySlug) {
                                 <div class="overlay">
                                     <div class="overlayText">
                                         <h3>${projData.title}</h3>
-                                        <p>${projData.blurb}</p>
+                                        <p>${projData.description}</p>
                                     </div>
                                 </div>
                             </a>
@@ -77,16 +77,41 @@ function loadProject() {
             let mediaHTML = '';
 
             if(projData.type === 'video') {
-                mediaHTML = `<video controls src="${basePath + projData.media}" />`;
+                mediaHTML = `<video controls src="${basePath + projData.main.src}" />`;
             } else {
-                mediaHTML = `<img src="${basePath + projData.media}" />`;
+                mediaHTML = `<img src="${basePath + projData.main.src}" />`;
+            }
+
+            galleryHTML = '';
+            if (projData.gallery && projData.gallery.length > 0) {
+                galleryHTML = '<div class="gallery">';
+
+                projData.gallery.forEach(item => {
+                    if(item.type === 'video') {
+                        galleryHTML += `<video controls src="${basePath + item.src}" />`;
+                    } else {
+                        galleryHTML += `<img src="${basePath + item.src}" />`;
+                    }
+                });
+                galleryHTML += '</div>';
             }
 
             container.innerHTML = `
                 <h1>${projData.title}</h1>
-                ${mediaHTML}
-                <p>${projData.description}</p>
-            `;
+                <p class="date">${projData.date}</p>
+
+                <div class="mainMedia">
+                    ${mainMedia}
+                </div>
+
+                <p class = "description">${projData.description}</p>
+                ${galleryHTML}
+                <div class="process">
+                    <h2>Process</h2>
+                    <p>${projData.process}</p>
+                </div>
+                `;
+            
           });
       });
 }

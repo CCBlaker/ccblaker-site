@@ -7,12 +7,64 @@
                 {
                     "title": "Fractal",
                     "slug": "fractal",
-                    "path": "art/art3d/fractal/"
+                    "path": "art/work/fractal/"
+                },
+                {
+                    "title": "Console Concepts",
+                    "slug": "console-concepts",
+                    "path": "art/work/console-concepts/"
+                },
+                {
+                    "title": "Mandelbulb",
+                    "slug": "mandelbulb",
+                    "path": "art/work/Mandelbulb/"
+                },
+                {
+                    "title":"Mission Control",
+                    "slug":"MissionControl",
+                    "path":"art/work/MissionControl/"
+                },
+                {
+                    "title":"Orbital Miner",
+                    "slug":"OrbitalMiner",
+                    "path":"art/work/OrbitalMiner/"
+                }
+            ]
+        },
+        {
+            "name": "Programming",
+            "slug": "programming",
+            "projects": [
+                {
+                    "title": "Fractal",
+                    "slug": "fractal",
+                    "path": "art/programming/fractal/"
                 },
                 {
                     "title": "Console Concepts",
                     "slug": "console-concepts",
                     "path": "art/programming/console-concepts/"
+                }, 
+                {
+                    "title": "Reymarch Visualizer",
+                    "slug": "ReymarchVisualizer",
+                    "path": "art/programming/ReymarchVisualizer/"
+                }
+            ]
+        },
+        {
+            "name": "Sketchbook",
+            "slug": "sketchbook",
+            "projects": [
+                {
+                    "title": "Fractal",
+                    "slug": "fractal",
+                    "path": "art/sketchbook/fractal/"
+                },
+                {
+                    "title": "Console Concepts",
+                    "slug": "console-concepts",
+                    "path": "art/sketchbook/console-concepts/"
                 }
             ]
         }

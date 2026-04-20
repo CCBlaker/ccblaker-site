@@ -3,19 +3,62 @@ html {
   font-size: 16px;
 }
 
-body {
-  background-color: black;
-  color: white;
-  font-family: Verdana, sans-serif;
-  padding-top: 0rem;
+:root {
+  --bg-main: #1e1d21;
+  --bg-accent: #403c47;
+  --text-main: #e9e4de;
+  --text-muted: #cfc8c0;
+
+  --border-outer: 5px;
+  --border-container: 3px;
+  --border-inner: 2px;
   
-  /* Page Background */
-  background-image: url("your_image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  --font-header: "Nosferatu", serif;
+  --font-subheader: "Abril Display", serif;
+  --font-body: "Crimson Pro", serif;
 }
 
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+}
+
+.contentMain {
+  border: var(--border-outer) solid var(--text-main);
+  padding: 2rem;
+  margin: 1rem;
+}
+
+header h1 {
+  font-family: var(--font-header);
+  font-size: 4rem;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  font-family: var(--font-subheader);
+  font-size: 2rem;
+}
+
+.headerBar a {
+  color: var(--text-main);
+  text-decoration: none;
+  border: var(--border-inner) solid transparent;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.headerBar a:hover {
+  border-color: var(--text-main);
+  background-color: var(--bg-accent);
+}
+
+section {
+  border: var(--border-container) solid var(--text-main);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 /* General Classes */
 
 /* Centered Text Class */
@@ -35,8 +78,9 @@ body {
 
 /* Line Seperator Class */
 .seperator {
-  outline: 0.1rem solid white;
-  margin: 0.5rem 0.5rem;
+  height: 4px;
+  background: var(--text-main);
+  margin: 2rem 0;
 }
 
 .fitImg {
@@ -45,7 +89,7 @@ body {
 }
 
 /* Main Content Box Class */
-.contentMain {
+/* .contentMain {
   display: flex;
   flex-direction: column;
   
@@ -57,12 +101,12 @@ body {
   gap: 0.5rem;
   
   /* Content Background */
-  border: 0.125rem solid white;
+  /* border: 0.125rem solid white;
   background-image: url("your_image2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
+} */ 
 
 /* .itemMain {
   /*border: 0.125rem solid blue;*
@@ -151,8 +195,9 @@ body {
 
 .card {
   position: relative;
+  border: var(--border-container) solid var(--text-main);
+  background: var(--bg-main);
   overflow: hidden;
-  border-radius: 12px;
 }
 
 
@@ -164,7 +209,24 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 10px;
-  gap: 1rem;
+  gap: 1.2rem;
+
+  
+}
+
+#project {
+  border: var(--border-container) solid var(--text-main);
+  padding: 2rem;
+}
+
+#project h1 {
+  font-family: var(--font-header);
+  font-size: 3rem;
+}
+
+.date {
+  font-family: var(--font-subheader);
+  color: var(--text-muted);
 }
 
 .thumbnail {
@@ -198,17 +260,84 @@ body {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.overlayText h3 {
+  font-family: var(--font-subheader);
+  margin-bottom: 0.3rem;
 }
 
 .card:hover .overlay {
   opacity: 1;
 }
 
-.card:hover .overlayText {
+.card:hover .overlayText{
   opacity: 1;
   transform: translateY(0);
 }
 
 .card:hover .thumbnail {
   transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.mainMedia {
+  border: var(--border-inner) solid var(--text-main);
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+}
+
+.mainMedia img, 
+.mainMedia video {
+  width: 100%;
+  height: 600px;
+  display:block;
+  object-fit: contain;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%;
+  border-radius: 8px;
+  border: var(--border-inner) solid var(--text-main);
+}
+
+.process {
+  margin-top: 2rem;
+  border-top: var(--border-container) solid var(--text-main);
+  padding-top: 1rem;
+}
+
+.headerBar {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.headerBar li {
+  flex:1;
+}
+.headerBar a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 0;
+  color: var(--text-main);
+  text-decoration: none;
+
+  border: var(--border-inner) solid transparent;
+  transition: all 0.2s ease;
+}
+.headerBar a:hover {
+  border-color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
 }
