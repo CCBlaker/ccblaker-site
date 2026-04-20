@@ -330,7 +330,7 @@ section {
   object-fit: contain;
 }
 
-.gallery {
+.gallery, .previs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
@@ -338,7 +338,9 @@ section {
 }
 
 .gallery img,
-.gallery video {
+.gallery video,
+.previs img,
+.previs video {
   width: 100%;
   border-radius: 8px;
   border: var(--border-inner) solid var(--text-main);
