@@ -64,6 +64,7 @@ function loadProject() {
         });
 
         const basePath = '/' + foundProject.path;
+        console.log("Loading project from path:", basePath);
 
         fetch(basePath + 'data.json')
           .then(res => res.json())
