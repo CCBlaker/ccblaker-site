@@ -195,8 +195,8 @@ section {
   padding: 0;
   margin: 0;
   
-  /* border: var(--border-container) solid var(--text-main);
-  background-color: black; */
+  border: var(--border-container) solid var(--text-main);
+  /*background-color: black; */
   /*border: 0.125rem solid green;*/
 }
 
@@ -356,7 +356,7 @@ section {
 
 .headerBar {
   display: flex;
-  width: 75%;
+  width: 100%;
   padding: 0;
   margin: 0 auto;
   list-style: none;
