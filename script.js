@@ -127,7 +127,7 @@ function loadProject() {
                 <div class="process">
                     <p>${projData.process}</p>
                 </div>
-                <div class="previsSection">
+                <div class="process">
                     ${previsHTML}
                 </div>
             `;
