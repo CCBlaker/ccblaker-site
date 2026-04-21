@@ -202,6 +202,7 @@ section {
 .headerTitle h2 {
   font-size: 2rem;
   margin: 0;
+  font-family: var(--font-subheader);
 }
 
 /* Header Bar Formatter Class */
