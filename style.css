@@ -195,8 +195,8 @@ section {
   padding: 0;
   margin: 0;
   
-  border: var(--border-container) solid var(--text-main);
-  background-color: black;
+  /* border: var(--border-container) solid var(--text-main);
+  background-color: black; */
   /*border: 0.125rem solid green;*/
 }
 
