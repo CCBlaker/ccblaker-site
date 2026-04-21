@@ -53,6 +53,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 900px) {
+  socials {
+    justify-content: center;
+  }
+}
+
 .contentMain {
   /* border: var(--border-outer) solid var(--text-main); */
   padding: 0.75rem;
