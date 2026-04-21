@@ -114,8 +114,8 @@ function loadProject() {
             }
 
             container.innerHTML = `
-                <h2>${projData.title}</h2>
-                <p class="date">${projData.date}</p>
+                <h2 style="text-align: left">${projData.title}</h2>
+                <p style="text-align: left" class="date">${projData.date}</p>
                 ${repoHTML}
 
                 <div class="mainMedia">
