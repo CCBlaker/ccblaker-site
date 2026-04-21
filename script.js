@@ -177,7 +177,7 @@ function buildJustifiedGallery(projects, containerId, targetRowHeight = 250) {
 
     projects.forEach((proj, index) => {
         const img = new Image();
-        img.src = proj.thumb.src;
+        img.src = proj.src;
 
         img.onload = () => {
             const aspect = img.width / img.height;
@@ -199,7 +199,7 @@ function buildJustifiedGallery(projects, containerId, targetRowHeight = 250) {
                     div.style.flex = `0 0 ${item.aspect * targetRowHeight * scale}px`;
 
                     const image = document.createElement('img');
-                    image.src = item.proj.thumb.src;
+                    image.src = item.proj.src;
 
                     div.appendChild(image);
                     row.appendChild(div);
