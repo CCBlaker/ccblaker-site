@@ -303,10 +303,10 @@ section {
   }
 }
 
-#project {
-  /* border: var(--border-container) solid var(--text-main); */
-  padding: 2rem;
-}
+/* #project {
+  border: var(--border-container) solid var(--text-main); */
+  /* padding: 2rem;
+} */
 
 #project h1 {
   font-family: var(--font-header);
