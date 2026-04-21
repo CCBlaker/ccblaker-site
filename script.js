@@ -83,7 +83,7 @@ function loadProject() {
 
             repoHTML = '';
             if(projData.repo) {
-                repoHTML = `<a href="${projData.repo}" target="_blank"><img src="/_branding/github-icon.jpg" alt="GitHub" width="32" height="32"></a>`;
+                repoHTML = `<a href="${projData.repo}" target="_blank"><img src="/_branding/github-icon.jpg" alt="GitHub" width="64" height="64"></a>`;
             }
 
             galleryHTML = '';
