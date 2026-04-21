@@ -24,7 +24,8 @@ html, body {
   
   --font-header: "Noserta Standard", serif;
   --font-subheader: "Abril Display", serif;
-  --font-body: "Crimson Pro", serif;
+  --font-body: "Basco Standard", serif;
+  --font-buttons: "Basco Bold", serif;
 }
 
 main {
@@ -93,6 +94,7 @@ header h2 {
   /* border: var(--border-inner) solid transparent; */
   padding: 0.3rem 0.6rem;
   transition: all 0.2s ease;
+  font-family: var(--font-buttons);
 }
 
 .headerBar a:hover {
@@ -251,6 +253,7 @@ section {
   color: white;
   border: var(--border-container) solid var(--text-main);
   padding: 1em;
+  font-family: var(--font-subheader);
 }
 
 .navLinks a:hover {
