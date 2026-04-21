@@ -210,6 +210,7 @@ section {
   text-decoration: none;
   color: white;
   border: var(--border-container) solid var(--text-main);
+  padding: 1em;
 }
 
 .navLinks a:hover {
