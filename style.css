@@ -401,8 +401,8 @@ section {
 }
 
 .gallery, .previs {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -412,7 +412,9 @@ section {
 .previs img,
 .previs video {
   width: 100%;
+  height:auto;
   border-radius: 8px;
+  object-fit: cover;
   border: var(--border-inner) solid var(--text-main);
 }
 
