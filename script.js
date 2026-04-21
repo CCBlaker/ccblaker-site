@@ -31,9 +31,9 @@ function loadCategory(categorySlug) {
                         
                         
                     `;
-                    const sizes = ['small', 'medium', 'small','medium','large'];
-                    const size = sizes[Math.floor(Math.random() * sizes.length)];
-                    div.classList.add(size);
+                    // const sizes = ['small', 'medium', 'small','medium','large'];
+                    // const size = sizes[Math.floor(Math.random() * sizes.length)];
+                    // div.classList.add(size);
                     container.appendChild(div);
 
                     const img = div.querySelector('img');
