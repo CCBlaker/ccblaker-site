@@ -270,8 +270,8 @@ section {
   position: relative;
   grid-column: span 2;
   overflow: hidden;
-  min-width: 150px;
-  max-width: 500px;
+  /* min-width: 150px;
+  max-width: 500px; */
   width: 100%;
   height: auto;
   /* height: 250px; */
@@ -281,7 +281,7 @@ section {
   background: var(--bg-main);
   margin: 0;
   align-self: start;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .card a {
