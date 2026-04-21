@@ -339,7 +339,7 @@ section {
 
 .thumbnail {
   width: auto;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
