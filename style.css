@@ -274,7 +274,8 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
   margin: 0;
@@ -293,6 +294,15 @@ section {
 }
 .card.large {
   grid-column: span 3;
+}
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .card.small, .card.medium, .card.large {
+    grid-column: span 1;
+  }
 }
 
 .container {

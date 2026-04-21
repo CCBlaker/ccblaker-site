@@ -13,10 +13,11 @@ function loadCategory(categorySlug) {
 
                     const mediaPath = '/' + project.path + projData.thumb.src;
 
-                    
+                    const sizes = ['small', 'medium', 'small','medium','large'];
+                    const size = sizes[Math.floor(Math.random() * sizes.length)];
                     
                     div.innerHTML = `
-                        <div class="card">
+                        <div class="card ${size}">
                             <a href="/project.html?proj=${project.slug}">
 
                                 <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
