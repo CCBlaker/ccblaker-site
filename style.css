@@ -284,9 +284,7 @@ section {
 }
 
 .card a {
-  display: block;
   width: 100%;
-  
 }
 .card.small {
   grid-column: span 1;
