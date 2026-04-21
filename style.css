@@ -28,7 +28,7 @@ html, body {
 }
 
 main {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
 
   border: var(--border-container) solid var(--text-main);
@@ -39,6 +39,11 @@ main {
   height: auto !important;
   max-height: none !important;
   flex: none;
+}
+@media (min-width: 900px) {
+  main {
+    width: 75%;
+  }
 }
 
 body {
