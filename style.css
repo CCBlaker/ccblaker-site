@@ -402,14 +402,8 @@ section {
 
 .gallery, .previs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: start;
-  overflow: visible !important;
-  height: auto !important;
-  width: 100%;
-  margin: 0 auto;
-  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .gallery img,
@@ -419,6 +413,7 @@ section {
   width: 100%;
   height:auto;
   border-radius: 8px;
+  flex:1;
   object-fit: cover;
   border: var(--border-inner) solid var(--text-main);
 }
