@@ -272,10 +272,7 @@ section {
   min-width: 0px;
   max-width: 500px;
   width: 100%;
-  height: auto;
   object-fit: cover;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
   margin: 0;
@@ -342,6 +339,7 @@ section {
   height: 250px;
   object-fit: cover;
   display: block;
+  grid-column: 1 / -1;
   transition: transform 0.3s ease;
 }
 @media (max-width: 600px) {
