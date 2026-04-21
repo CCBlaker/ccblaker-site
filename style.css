@@ -268,7 +268,6 @@ section {
 .card {
   line-height: 0;
   position: relative;
-  grid-column: span 2;
   overflow: hidden;
   min-width: 150px;
   max-width: 500px;
@@ -281,7 +280,7 @@ section {
   background: var(--bg-main);
   margin: 0;
   align-self: start;
-  /* flex-grow: 1; */
+  flex-grow: 1;
 }
 
 .card a {
@@ -304,8 +303,8 @@ section {
 }
 
 #projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
   align-items: start;
   overflow: visible !important;
@@ -337,7 +336,7 @@ section {
 }
 
 .thumbnail {
-  width: 100%;
+  width: auto;
   height: 250px;
   object-fit: cover;
   display: block;
