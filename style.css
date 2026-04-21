@@ -289,7 +289,15 @@ section {
   width: 100%;
   
 }
-
+.card.small {
+  grid-column: span 1;
+}
+.card.medium {
+  grid-column: span 2;
+}
+.card.large {
+  grid-column: span 3;
+}
 
 .container {
   padding: 2px 16px;
