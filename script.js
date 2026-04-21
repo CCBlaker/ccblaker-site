@@ -136,18 +136,18 @@ function loadProject() {
       });
 }
 
-// function resizeGridItem(item) {
-//     const grid = document.getElementById('projects');
+function resizeGridItem(item) {
+    const grid = document.getElementById('projects');
 
-//     const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-//     const rowGap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
+    const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
 
     
-//     const height = item.getBoundingClientRect().height;
+    const height = item.getBoundingClientRect().height;
 
-//     const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
-//     item.style.gridRowEnd = "span "+rowSpan;
-// }
+    const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+}
 
 function loadComponent(id,path){
     fetch(path)
@@ -159,17 +159,17 @@ function loadComponent(id,path){
 }
 
 
-// window.addEventListener('resize', () => {
-//     const cards = document.querySelectorAll('.card');
-//     cards.forEach(card => {
-//         const img = card.querySelector('img');
+window.addEventListener('resize', () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const img = card.querySelector('img');
 
-//         if(img.complete) {
-//             resizeGridItem(card);
-//         }
-//     });
-// });
+        if(img.complete) {
+            resizeGridItem(card);
+        }
+    });
+});
 
-// window.addEventListener('load', () => {
-//     document.querySelectorAll('.card').forEach(resizeGridItem);
-// });
+window.addEventListener('load', () => {
+    document.querySelectorAll('.card').forEach(resizeGridItem);
+});
