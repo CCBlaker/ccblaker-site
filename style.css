@@ -28,6 +28,10 @@ html, body {
   --font-buttons: "basco-std", serif, font-weight: 700;
 }
 
+p {
+  font-family: var(--font-body);
+}
+
 main {
   width: 100%;
   margin: 0 auto;
