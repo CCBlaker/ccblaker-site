@@ -410,7 +410,7 @@ section {
 .gallery video,
 .previs img,
 .previs video {
-  width: 100%;
+  width: 50%;
   height:auto;
   border-radius: 8px;
   flex:1;
