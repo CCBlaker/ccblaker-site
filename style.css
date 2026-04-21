@@ -221,7 +221,7 @@ section {
   position: relative;
   width: 100%;
   display: block;
-  border: var(--border-container) solid var(--text-main);
+  /* border: var(--border-container) solid var(--text-main); */
   background: var(--bg-main);
   
   min-width: 0;
@@ -251,7 +251,7 @@ section {
 }
 
 #project {
-  border: var(--border-container) solid var(--text-main);
+  /* border: var(--border-container) solid var(--text-main); */
   padding: 2rem;
 }
 
