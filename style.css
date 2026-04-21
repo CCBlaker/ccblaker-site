@@ -203,7 +203,7 @@ section {
 .navLinks li {
   
   border: none;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .navLinks a {
