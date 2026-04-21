@@ -13,11 +13,10 @@ function loadCategory(categorySlug) {
 
                     const mediaPath = '/' + project.path + projData.thumb.src;
 
-                    const sizes = ['small', 'medium', 'small','medium','large'];
-                    const size = sizes[Math.floor(Math.random() * sizes.length)];
+                    
                     
                     div.innerHTML = `
-                        <div class="card ${size}">
+                        <div class="card">
                             <a href="/project.html?proj=${project.slug}">
 
                                 <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
@@ -81,7 +80,7 @@ function loadProject() {
             if(projData.main.type === 'video') {
                 mediaHTML = `<video controls src="${basePath + projData.main.src}" />`;
             } else {
-                mediaHTML = `<img src="${basePath + projData.main.src}" />`;
+                mediaHTML = `<img src="${basePath + projData.main.src}" class="thumb" onclick="openLightbox(this.src)" />`;
             }
 
             repoHTML = '';
@@ -97,7 +96,7 @@ function loadProject() {
                     if(item.type === 'video') {
                         galleryHTML += `<video controls src="${basePath + item.src}" />`;
                     } else {
-                        galleryHTML += `<img src="${basePath + item.src}" />`;
+                        galleryHTML += `<img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)"/>`;
                     }
                 });
                 galleryHTML += '</div>';
@@ -110,7 +109,7 @@ function loadProject() {
                     if(item.type === 'video') {
                         previsHTML += `<video controls src="${basePath + item.src}" />`;
                     } else {
-                        previsHTML += `<img src="${basePath + item.src}" />`;
+                        previsHTML += `<img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)"/>`;
                     }
                 });
                 previsHTML += '</div>';
