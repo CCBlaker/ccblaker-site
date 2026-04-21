@@ -9,18 +9,10 @@ function loadCategory(categorySlug) {
                 fetch('/' + project.path + 'data.json')
                   .then(res => res.json())
                   .then(projData => {
-                    if (projData.thumb && projData.thumb.src) {
-                        images.push({
-                            src: '/' + project.path + projData.thumb.src,
-                            slug: project.slug
-                        });
-                    } else {
-                        console.warn("Missing thumbnail for project:", project.slug);
-                    }
-                    // images.push({
-                    //     src: '/' + project.path + projData.thumb.src,
-                    //     slug: project.slug
-                    // });
+                    images.push({
+                        src: '/' + project.path + projData.thumb.src,
+                        slug: project.slug
+                    });
 
                     if(images.length === category.projects.length) {
                         buildJustifiedGallery(images, 'projects', 250);
