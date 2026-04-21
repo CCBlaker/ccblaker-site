@@ -24,8 +24,8 @@ html, body {
   
   --font-header: "Noserta Standard", serif;
   --font-subheader: "Abril Display", serif;
-  --font-body: "Basco Standard", serif;
-  --font-buttons: "Basco Bold", serif;
+  --font-body: "basco-std", serif;
+  --font-buttons: "basco-std", serif, font-weight: 700;
 }
 
 main {
