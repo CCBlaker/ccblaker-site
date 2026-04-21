@@ -3,6 +3,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+}
+
 html, body {
   overflow-x: hidden;
   height: auto;
@@ -18,7 +22,7 @@ html, body {
   --border-container: 3px;
   --border-inner: 2px;
   
-  --font-header: "Nosferatu", serif;
+  --font-header: "Noserta Standard", serif;
   --font-subheader: "Abril Display", serif;
   --font-body: "Crimson Pro", serif;
 }
@@ -45,22 +49,29 @@ body {
 
 .contentMain {
   /* border: var(--border-outer) solid var(--text-main); */
-  padding: 2rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
   overflow: visible !important;
   height: auto !important;
   max-height: none !important;
 }
 
+@media (min-width: 900px) {
+  .contentMain {
+    max-width: 75%;
+    padding: 2rem;
+  }
+}
 header h1 {
   font-family: var(--font-header);
-  font-size: 4rem;
-  letter-spacing: 1px;
+  font-size: clamp(2rem, 6vw, 4rem);
 }
 
 header h2 {
   font-family: var(--font-subheader);
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
 .headerBar a {
@@ -78,9 +89,14 @@ header h2 {
 
 section {
   /* border: var(--border-container) solid var(--text-main); */
-  padding: 1.5rem;
+  padding: 1rem;
   margin-bottom: 1.5rem;
   max-width: 100%;
+}
+@media (min-width: 900px) {
+  section {
+    padding: 1.5rem;
+  }
 }
 /* General Classes */
 
@@ -169,6 +185,7 @@ section {
 /* Header Bar Formatter Class */
 .headerBar {
   display: flex;
+  
   justify-content: center;
   gap: 1rem;
   
@@ -242,13 +259,23 @@ section {
 
 #projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   grid-auto-rows: 10px;
-  gap: 1rem;
+  gap: 0.75rem;
   align-items: start;
   overflow: visible !important;
   height: auto !important;
-  
+}
+@media (min-width: 700px){
+  #projects {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  #projects {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
 }
 
 #project {
@@ -328,7 +355,8 @@ section {
 .mainMedia img, 
 .mainMedia video {
   width: 100%;
-  height: 600px;
+  height: auto;
+  max-height: 70vh;
   display:block;
   object-fit: contain;
 }
@@ -364,8 +392,13 @@ section {
   gap: 0.5rem
 }
 .headerBar li {
-  flex:1;
+  flex:1 1 50%;
   display: flex;
+}
+@media (min-width: 600px) {
+  .headerBar li {
+    flex:1;
+  }
 }
 .headerBar a {
   display: flex;
