@@ -280,6 +280,7 @@ section {
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
   margin: 0;
+  
   align-self: start;
   flex-grow: 1;
 }
@@ -289,7 +290,15 @@ section {
   width: 100%;
   
 }
-
+.card.small {
+  grid-column: span 2;
+}
+.card.medium {
+  grid-column: span 3;
+}
+.card.large {
+  grid-column: span 4;
+}
 
 .container {
   padding: 2px 16px;
@@ -330,7 +339,7 @@ section {
 
 .thumbnail {
   width: auto;
-  height: auto;
+  height: 250px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
