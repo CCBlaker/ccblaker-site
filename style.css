@@ -304,7 +304,7 @@ section {
   height: auto !important;
   width: 100%;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: left;
 }
 @media (max-width: 600px){
   #projects {
