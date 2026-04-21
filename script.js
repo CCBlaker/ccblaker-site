@@ -4,40 +4,48 @@ function loadCategory(categorySlug) {
         .then(data => {
             const category = data.categories.find(c => c.slug === categorySlug);
             const container = document.getElementById('projects');
-
+            const images = [];
             category.projects.forEach(project => {
                 fetch('/' + project.path + 'data.json')
                   .then(res => res.json())
                   .then(projData => {
-                    const div = document.createElement('div');
+                    images.push({
+                        src: '/' + project.path + projData.thumb.src,
+                        slug: project.slug
+                    });
 
-                    const mediaPath = '/' + project.path + projData.thumb.src;
+                    if(images.length === category.projects.length) {
+                        buildJustifiedGallery(images, 'projects', 250);
+                    }
+                    // const div = document.createElement('div');
 
-                    div.innerHTML = `
-                        <div class="card">
-                            <a href="/project.html?proj=${project.slug}">
+                    // const mediaPath = '/' + project.path + projData.thumb.src;
 
-                                <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
+                    // div.innerHTML = `
+                    //     <div class="card">
+                    //         <a href="/project.html?proj=${project.slug}">
 
-                                <div class="overlay">
-                                    <div class="overlayText">
-                                        <h3>${projData.title}</h3>
+                    //             <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
+
+                    //             <div class="overlay">
+                    //                 <div class="overlayText">
+                    //                     <h3>${projData.title}</h3>
                                         
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                    //                 </div>
+                    //             </div>
+                    //         </a>
+                    //     </div>
                             
                         
                         
-                    `;
+                    // `;
 
-                    container.appendChild(div);
+                    // container.appendChild(div);
 
-                    const img = div.querySelector('img');
-                    img.onload = () => {
-                        requestAnimationFrame(() => resizeGridItem(div));
-                    };
+                    // const img = div.querySelector('img');
+                    // img.onload = () => {
+                    //     requestAnimationFrame(() => resizeGridItem(div));
+                    // };
                   });
             });
         });
@@ -158,7 +166,53 @@ function loadComponent(id,path){
         .catch(err=>console.error(`Failed to load ${path}:`, err));
 }
 
+function buildJustifiedGallery(projects, containerId, targetRowHeight = 250) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; // Clear existing content
 
+    let currentRow = [];
+    let currentWidth = 0;
+
+    const containerWidth = container.clientWidth;
+
+    projects.forEach((proj, index) => {
+        const img = new Image();
+        img.src = proj.thumb.src;
+
+        img.onload = () => {
+            const aspect = img.width / img.height;
+
+            currentRow.push({proj, aspect, img});
+            currentWidth += aspect * targetRowHeight;
+
+            if (currentWidth >= containerWidth || index === projects.length - 1) {
+                const scale = containerWidth / currentWidth;
+
+                const row = document.createElement('div');
+                row.classList.add('row');
+                row.style.height = `${targetRowHeight * scale}px`;
+
+                currentRow.forEach(item => {
+                    const div = document.createElement('div');
+                    div.classList.add('card');
+
+                    div.style.flex = `0 0 ${item.aspect * targetRowHeight * scale}px`;
+
+                    const image = document.createElement('img');
+                    image.src = item.proj.thumb.src;
+
+                    div.appendChild(image);
+                    row.appendChild(div);
+                });
+
+                container.appendChild(row);
+
+                currentRow = [];
+                currentWidth = 0;
+            }
+        };
+    });
+}
 // window.addEventListener('resize', () => {
 //     const cards = document.querySelectorAll('.card');
 //     cards.forEach(card => {
