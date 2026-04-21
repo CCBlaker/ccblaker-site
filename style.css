@@ -274,7 +274,7 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
-  display: grid;
+  display: block;
   border: var(--border-container) solid var(--text-main);
   background: var(--bg-main);
   margin: 0;
