@@ -1,5 +1,5 @@
 {
-    "title": "Placeholder",
+    "title": "temp",
     "date": "2026-4-22",
 
     "thumb": {
@@ -8,7 +8,7 @@
     },
     "main": {
         "type": "image",
-        "src": "Placeholder_Main.png"
+        "src": "Placeholder_Image.png"
     },
 
     "description": "Fractal with example stuff idk what I'm writing",
