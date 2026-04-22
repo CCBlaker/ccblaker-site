@@ -498,8 +498,8 @@ section {
 }
 .projectHeader {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 .projectHeader h2 {
@@ -507,7 +507,6 @@ section {
   text-align: left;
 }
 .projectHeader .date {
-  font-family: var(--font-body);
   color: var(--text-muted);
   text-align: right;
   flex: 1;
