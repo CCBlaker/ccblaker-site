@@ -203,13 +203,23 @@ window.addEventListener('load', () => {
     document.querySelectorAll('.card').forEach(resizeGridItem);
 });
 
-document.getElementById("lightbox").addEventListener("click", (e) => {
-    if ( e.target.id === "lightbox" || e.target.id === "lightbox-img") {
-        closeLightbox();
-    }
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+
+    lightbox.addEventListener('click', (e) => {
+        if(e.target.id === 'lightbox' || e.target.id === 'lightbox-img') {
+            closeLightbox();
+        }
+    });
+});
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
         closeLightbox();
+    }
+});
+document.addEventListener('click', (e) => {
+    const img = e.target.closest ('[data-lightbox]');
+    if (img) {
+        openLightbox(img.src);
     }
 });
