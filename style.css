@@ -496,6 +496,22 @@ section {
     flex:none;
   }
 }
+.projectHeader {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+}
+.projectHeader h2 {
+  font-family: var(--font-subheader);
+  text-align: left;
+}
+.projectHeader .date {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  text-align: right;
+  flex: 1;
+}
 
 
 *, *::before,
