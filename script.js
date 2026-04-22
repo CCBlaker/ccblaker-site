@@ -81,7 +81,7 @@ function loadProject() {
             if(projData.main.type === 'video') {
                 mediaHTML = `<video controls src="${basePath + projData.main.src}" alt="${projData.main.alt || ''}"/>`;
             } else {
-                mediaHTML = `<img src="${basePath + projData.main.src}" class="thumb" onclick="openLightbox(this.src)" />`;
+                mediaHTML = `<img src="${basePath + projData.main.src}" class="thumb" data-lightbox />`;
             }
 
             repoHTML = '';
@@ -98,7 +98,7 @@ function loadProject() {
                     } else {
                         galleryHTML += `
                             <div class="galleryItem">
-                                <img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)" alt="${item.alt || ''}"/>
+                                <img src="${basePath + item.src}" class="thumb" alt="${item.alt || ''}" data-lightbox/>
                                 <div class="galleryOverlay">
                                     <div class="galleryText">${item.alt || ''}</div>
                                 </div>
@@ -119,7 +119,7 @@ function loadProject() {
                     } else {
                         previsHTML += `
                             <div class="galleryItem">
-                                <img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)" alt="${item.alt || ''}"/>
+                                <img src="${basePath + item.src}" class="thumb" data-lightbox alt="${item.alt || ''}"/>
                                 <div class="galleryOverlay">
                                     <div class="galleryText">${item.alt || ''}</div>
                                 </div>
@@ -177,6 +177,16 @@ function loadComponent(id,path){
         .catch(err=>console.error(`Failed to load ${path}:`, err));
 }
 
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+}
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+}
 
 window.addEventListener('resize', () => {
     const cards = document.querySelectorAll('.card');
@@ -191,4 +201,15 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('load', () => {
     document.querySelectorAll('.card').forEach(resizeGridItem);
+});
+
+document.getElementById("lightbox").addEventListener("click", (e) => {
+    if ( e.target.id === "lightbox" || e.target.id === "lightbox-img") {
+        closeLightbox();
+    }
+})
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        closeLightbox();
+    }
 });
