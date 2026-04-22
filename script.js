@@ -79,7 +79,7 @@ function loadProject() {
             let mediaHTML = '';
 
             if(projData.main.type === 'video') {
-                mediaHTML = `<video controls src="${basePath + projData.main.src}" alt="${projData.main.alt || ''}"/>`;
+                mediaHTML = `<video controls autoplay src="${basePath + projData.main.src}" alt="${projData.main.alt || ''}"/>`;
             } else {
                 mediaHTML = `<img src="${basePath + projData.main.src}" class="thumb" data-lightbox />`;
             }
