@@ -67,6 +67,17 @@
                     "path": "art/sketchbook/console-concepts/"
                 }
             ]
+        },
+        {
+            "name": "Templates",
+            "slug": "templates",
+            "projects": [
+                {
+                    "title": "templates",
+                    "slug": "temp",
+                    "path": "art/templates/temp/"
+                }
+            ]
         }
     ]
 }
