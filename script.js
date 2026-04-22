@@ -79,7 +79,7 @@ function loadProject() {
             let mediaHTML = '';
 
             if(projData.main.type === 'video') {
-                mediaHTML = `<video controls src="${basePath + projData.main.src}" />`;
+                mediaHTML = `<video controls src="${basePath + projData.main.src}" alt="${projData.main.alt || ''}"/>`;
             } else {
                 mediaHTML = `<img src="${basePath + projData.main.src}" class="thumb" onclick="openLightbox(this.src)" />`;
             }
@@ -92,13 +92,20 @@ function loadProject() {
             galleryHTML = '';
             if (projData.gallery && projData.gallery.length > 0) {
                 galleryHTML = '<div class="gallery">';
-
                 projData.gallery.forEach(item => {
                     if(item.type === 'video') {
-                        galleryHTML += `<video controls src="${basePath + item.src}" />`;
+                        galleryHTML += `<video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>`;
                     } else {
-                        galleryHTML += `<img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)"/>`;
+                        galleryHTML += `
+                            <div class="galleryItem">
+                                <img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)" alt="${item.alt || ''}"/>
+                                <div class="galleryOverlay">
+                                    <div class="galleryText">${item.alt || ''}</div>
+                                </div>
+                            </div>
+                        `;
                     }
+
                 });
                 galleryHTML += '</div>';
             }
@@ -108,9 +115,16 @@ function loadProject() {
 
                 projData.previs.forEach(item => {
                     if(item.type === 'video') {
-                        previsHTML += `<video controls src="${basePath + item.src}" />`;
+                        previsHTML += `<video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>`;
                     } else {
-                        previsHTML += `<img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)"/>`;
+                        previsHTML += `
+                            <div class="galleryItem">
+                                <img src="${basePath + item.src}" class="thumb" onclick="openLightbox(this.src)" alt="${item.alt || ''}"/>
+                                <div class="galleryOverlay">
+                                    <div class="galleryText">${item.alt || ''}</div>
+                                </div>
+                            </div>
+                        `;
                     }
                 });
                 previsHTML += '</div>';

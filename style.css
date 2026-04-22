@@ -438,6 +438,7 @@ section {
   object-fit: cover;
   border: var(--border-inner) solid var(--text-main);
 }
+
 .gallery > *,
 .previs > * {
   margin: 0 0 1rem 0;
@@ -447,6 +448,57 @@ section {
   .gallery, .previs {
     column-count: 1;
   }
+}
+
+.galleryItem, 
+.previs .galleryItem {
+  position: relative;
+  overflow: hidden;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+.galleryItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-main);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galleryText {
+  padding: 0.75rem;
+  color: var(--text-main);
+  font-family: var(--font-body);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryItem:hover .galleryText {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .process {
