@@ -487,6 +487,10 @@ section {
   transition: all 0.3s ease;
 }
 
+.galleryText:empty {
+  display: none;
+}
+
 .galleryItem:hover img {
   transform: scale(1.05);
   filter: brightness(0.7);
