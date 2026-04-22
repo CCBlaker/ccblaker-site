@@ -473,9 +473,7 @@ section {
   background: rgba(255, 255, 255, 0.05);
 }
 
-footer{
-  width: 75%;
-}
+
 .footerContent {
   display: flex;
   align-items: center;
