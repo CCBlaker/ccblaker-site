@@ -10,11 +10,6 @@
                     "path": "art/work/fractal/"
                 },
                 {
-                    "title": "Console Concepts",
-                    "slug": "console-concepts",
-                    "path": "art/work/console-concepts/"
-                },
-                {
                     "title": "Mandelbulb",
                     "slug": "mandelbulb",
                     "path": "art/work/Mandelbulb/"
@@ -40,11 +35,6 @@
                     "slug": "fractal",
                     "path": "art/programming/fractal/"
                 },
-                {
-                    "title": "Console Concepts",
-                    "slug": "console-concepts",
-                    "path": "art/programming/console-concepts/"
-                }, 
                 {
                     "title": "Reymarch Visualizer",
                     "slug": "ReymarchVisualizer",
