@@ -425,7 +425,6 @@ section {
 .previs video {
   width: 100%;
   height:auto;
-  border-radius: 8px;
   object-fit: cover;
   border: var(--border-inner) solid var(--text-main);
 }
