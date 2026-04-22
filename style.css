@@ -467,7 +467,7 @@ section {
 .galleryOverlay {
   position: absolute;
   inset: 0;
-  background: var(--bg-main);
+  background: transparent;
 
   display: flex;
   align-items: flex-end;
