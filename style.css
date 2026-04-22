@@ -58,11 +58,15 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 600px) {
-  socials {
-    justify-content: center;
-  }
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 
 .contentMain {
   /* border: var(--border-outer) solid var(--text-main); */
@@ -472,6 +476,30 @@ section {
 footer{
   width: 75%;
 }
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footerContent p:first-child {
+  text-align: left;
+}
+.footer-center {
+  text-align: center;
+  flex: 1;
+}
+@media (max-width: 600px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-center {
+    flex:none;
+  }
+}
+
 
 *, *::before,
  *::after {
