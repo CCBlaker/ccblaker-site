@@ -352,6 +352,11 @@ section {
     height: 180px;
   }
 }
+.thumb {
+  width:100%;
+  height: auto;
+  display: block;
+}
 .overlay {
   position: absolute;
   inset: 0;
@@ -417,6 +422,7 @@ section {
   column-gap: 1rem;
   /* display: grid;
   grid-template-columns: repeat(2,1fr); */
+  column-fill: balance;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -427,10 +433,14 @@ section {
 .previs video {
   width: 100%;
   height:auto;
-  margin-bottom: 1rem;
+  display:block;
   break-inside: avoid;
   object-fit: cover;
   border: var(--border-inner) solid var(--text-main);
+}
+.gallery > *,
+.previs > * {
+  margin: 0 0 1rem 0;
 }
 
 @media (max-width: 600px) {
