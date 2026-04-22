@@ -218,10 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     document.addEventListener('click', (e) => {
-        const img = e.target.closest ('[data-lightbox]');
-        console.log('clicked', img.src);
+        const img = e.target.closest ('img[data-lightbox]');
+        console.log('clicked', img.getAttribute('src'));
         if(!img) return;
-        openLightbox(img.src);
+        openLightbox(img.getAttribute('src'));
         
     });
     document.addEventListener('click', (e) => {
