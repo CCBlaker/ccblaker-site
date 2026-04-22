@@ -211,16 +211,20 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLightbox();
         }
     });
-});
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        closeLightbox();
-    }
-});
-document.addEventListener('click', (e) => {
-    const img = e.target.closest ('[data-lightbox]');
-    console.log('clicked', img.src);
-    if (img) {
-        openLightbox(img.src);
-    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            closeLightbox();
+        }
+    });
+    document.addEventListener('click', (e) => {
+        const img = e.target.closest ('[data-lightbox]');
+        console.log('clicked', img.src);
+        if (img) {
+            openLightbox(img.src);
+        }
+    });
+    document.addEventListener('click', (e) => {
+        console.log('ANY CLICK detected');
+    });
 });
