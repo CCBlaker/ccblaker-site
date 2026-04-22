@@ -219,6 +219,7 @@ document.addEventListener('keydown', (e) => {
 });
 document.addEventListener('click', (e) => {
     const img = e.target.closest ('[data-lightbox]');
+    console.log('clicked', img.src);
     if (img) {
         openLightbox(img.src);
     }
