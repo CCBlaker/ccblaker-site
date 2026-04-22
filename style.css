@@ -469,6 +469,8 @@ section {
   inset: 0;
   background: transparent;
 
+
+  pointer-events: none;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
