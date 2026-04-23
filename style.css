@@ -1,17 +1,20 @@
 
 html {
   font-size: 16px;
-}
+} 
+/* base font size, change as needed, shouldn't Really need to */
 
 body {
   margin: 0;
 }
 
+/* makes projects not collapse into like 250 px high with a scroll bar (gross) */
 html, body {
   overflow-x: hidden;
   height: auto;
 }
 
+/* main setup of variables, colors, fonts, etc */
 :root {
   --bg-main: #1e1d21;
   --bg-accent: #403c47;
@@ -28,11 +31,14 @@ html, body {
   --font-buttons: "basco-std", serif, font-weight: 700;
 }
 
+/* paragraphs are in the body font (basco) */
 p {
   font-family: var(--font-body);
 }
 
+/* main is the element containing most of the elements, check any of the main pages to see. */
 main {
+  /* the width is the width. easy. takes up 100% of the screen. */
   width: 100%;
   margin: 0 auto;
 
@@ -45,12 +51,14 @@ main {
   max-height: none !important;
   flex: none;
 }
+/* if the screen's width is wider than 900px (more than a phone basically) scale the main to 75% of screen. */
 @media (min-width: 900px) {
   main {
     width: 75%;
   }
 }
 
+/* sets colors */
 body {
   background: var(--bg-main);
   color: var(--text-main);
@@ -59,6 +67,7 @@ body {
 }
 
 
+/* socials bar at footer, makes it stick to flexbox */
 .socials {
   display: flex;
   gap: 0.5rem;
@@ -67,7 +76,7 @@ body {
   margin: 0;
 }
 
-
+/* main project container, sticks with main to scale on size */
 .contentMain {
   /* border: var(--border-outer) solid var(--text-main); */
   padding: 0.75rem;
@@ -86,6 +95,7 @@ body {
     padding: 2rem;
   }
 }
+/* fairly obvious, lmk if you need this marked */
 header h1 {
   font-family: var(--font-header);
   font-size: clamp(2rem, 6vw, 4rem);
@@ -96,6 +106,8 @@ header h2 {
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
+
+/* links in headerbar, padding is the distance between the link and the outside of the button */
 .headerBar a {
   color: var(--text-main);
   text-decoration: none;
@@ -105,11 +117,13 @@ header h2 {
   font-family: var(--font-buttons);
 }
 
+/* hover scripting */
 .headerBar a:hover {
   border-color: var(--text-main);
   background-color: var(--bg-accent);
 }
 
+/* section marker, line seperator */
 section {
   /* border: var(--border-container) solid var(--text-main); */
   padding: 0.75rem;
@@ -150,29 +164,7 @@ section {
   width: 100%;
 }
 
-/* Main Content Box Class */
-/* .contentMain {
-  display: flex;
-  flex-direction: column;
-  
-  width: 100%;
-  max-width: 80rem;
-  
-  margin: 0 auto;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  
-  /* Content Background */
-  /* border: 0.125rem solid white;
-  background-image: url("your_image2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */ 
 
-/* .itemMain {
-  /*border: 0.125rem solid blue;*
-} */
 
 /* Header Title Class */
 .headerTitle {
@@ -229,6 +221,7 @@ section {
 }
 
 /* Dropdown Formatter Class */
+/* currently not used lmao */
 .dropDown {
   display: flex;
   justify-content: flex-start;
@@ -269,7 +262,7 @@ section {
   color: gray;
 }
 
-
+/* each project image goes in here! */
 .card {
   line-height: 0;
   position: relative;
@@ -298,6 +291,7 @@ section {
   grid-column: span 3;
 }
 
+/* evens things out on small screens */
 @media (max-width: 600px) {
   .card {
     grid-template-columns: 1fr;
@@ -311,6 +305,7 @@ section {
   padding: 2px 16px;
 }
 
+/* big projects div, all the cards/projects go in here! */
 #projects {
   display: flex;
   flex-wrap: wrap;
@@ -329,16 +324,19 @@ section {
   /* padding: 2rem;
 } */
 
+/* project name on project page */
 #project h1 {
   font-family: var(--font-header);
   font-size: 3rem;
 }
 
+/* date on project page */
 .date {
   font-family: var(--font-subheader);
   color: var(--text-muted);
 }
 
+/* thumbnail for projects div, each card has a thumbnail */
 .thumbnail {
   width: 100%;
   height: 250px;
@@ -352,11 +350,16 @@ section {
     height: 180px;
   }
 }
+
+/* for project page */
 .thumb {
   width:100%;
   height: auto;
   display: block;
 }
+
+/* magic things. */
+/* this is what shows up when you hover a project image */
 .overlay {
   position: absolute;
   inset: 0;
@@ -373,6 +376,7 @@ section {
   transition: opacity 0.3s ease;
 }
 
+/* text that shows up on overlay */
 .overlayText {
   padding: 1rem;
   color: white;
@@ -388,6 +392,7 @@ section {
   margin-bottom: 0.3rem;
 }
 
+/* on hover: make appear */
 .card:hover .overlay {
   opacity: 1;
 }
@@ -397,17 +402,20 @@ section {
   transform: translateY(0);
 }
 
+/* flashy zoom and dim */
 .card:hover .thumbnail {
   transform: scale(1.05);
   filter: brightness(0.8);
 }
 
+/* main project image div on project page */
 .mainMedia {
   border: var(--border-inner) solid var(--text-main);
   margin: 1.5rem 0;
   padding: 0.5rem;
 }
 
+/* spotlight image/video or whatever */
 .mainMedia img, 
 .mainMedia video {
   width: 100%;
@@ -417,6 +425,7 @@ section {
   object-fit: contain;
 }
 
+/* gallery and previs are the divs holding populated images */
 .gallery, .previs {
   column-count: 2;
   column-gap: 1rem;
@@ -427,6 +436,7 @@ section {
   margin-top: 1rem;
 }
 
+/* the images! they fit in twooooo columns  */
 .gallery img,
 .gallery video,
 .previs img,
@@ -439,6 +449,8 @@ section {
   border: var(--border-inner) solid var(--text-main);
 }
 
+/* everything in gallery and previs has a lower margin but that's it, this lets them fit against each other. */
+/* REMEMBER THAT SHITTY PROBLEM WITH GAPS? THIS SOLVES IT. DON"T TOUCH IT */
 .gallery > *,
 .previs > * {
   margin: 0 0 1rem 0;
@@ -464,6 +476,7 @@ section {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Magic shit don't touch. mostly the same with project overlay. this is not JUST gallery overlay, it's also previs */
 .galleryOverlay {
   position: absolute;
   inset: 0;
@@ -498,6 +511,7 @@ section {
 .galleryItem:hover img {
   transform: scale(1.05);
 }
+/* AS LONG AS THE ITEM HAS ALT TEXT dim the image to see text */
 .galleryItem:has(.galleryText:not(:empty)):hover img {
   filter: brightness(0.8);
 }
@@ -517,6 +531,9 @@ section {
   padding-top: 1rem;
 }
 
+
+/* makes header sit evenly, icon > logo > header */
+/* iif small screen stack them */
 .headerBar {
   display: flex;
   width: 100%;
@@ -529,6 +546,7 @@ section {
   flex:1 1 50%;
   display: flex;
 }
+/* if larger screen make it one row */
 @media (min-width: 600px) {
   .headerBar li {
     flex:1;
@@ -561,7 +579,7 @@ section {
   justify-content: space-between;
   gap: 1rem;
 }
-
+/* makes footer all in one row, copyright, email, socials */
 .footerContent p:first-child {
   text-align: left;
 }
@@ -600,6 +618,7 @@ section {
    box-sizing: border-box;
  }
 
+ /* DONT TOUCH THIS. */
  #lightbox {
   position:fixed;
   top:0;
@@ -622,6 +641,7 @@ section {
    object-fit: contain;
  }
 
+ /* makes cursor the little magnifying glass <3 cute */
  .thumb, 
  .mainMedia img, 
  .galleryItem img {
