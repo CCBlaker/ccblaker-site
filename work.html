@@ -10,7 +10,9 @@
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="/style.css">
+  <!-- Imports fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ivu1yzf.css">
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/_branding/logo_onblack.svg">
 </head>
 
@@ -18,18 +20,18 @@
   
 <div class="contentMain">
 
-  <!-- Header -->
-  
-
   <!-- Main -->
   <main class="itemMain">
   
+    <!-- Adds navbar on load -->
     <header id="navbar"></header>
+    <!-- centers content -->
     <div class="centered">
+      <!-- projects get populated here -->
       <div id = "projects"></div>
     </div>
     
-    
+    <!-- adds footer on load -->
     <div id="footer"></div>
     
 
@@ -41,6 +43,7 @@
   
 </div>
 <script src="/script.js" defer></script>
+<!-- on load, run these scripts -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         loadComponent('navbar','/components/navbar.html');

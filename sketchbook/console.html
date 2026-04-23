@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes rem/em + mobile behave properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CCB</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ivu1yzf.css">
+  <link rel="icon" type="image/png" href="/_branding/logo_onblack.svg">
+</head>
+<body>
+  <div class="contentMain">
+
+  
+  <main class="itemMain">
+    <header id="navbar"></header>
+    <div>
+      <div id = "project">
+        <!-- Add project content here! -->
+      </div>
+    </div>
+    <div id="footer"></div>
+  </main>
+  </div>
+    <script src="/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('navbar','/components/navbar.html');
+            loadComponent('footer', '/components/footer.html');
+        });
+    </script>
+    <div id="lightbox">
+      <img id="lightbox-img">
+    </div>
+</body>
+</html>
