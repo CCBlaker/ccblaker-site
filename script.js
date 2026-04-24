@@ -93,7 +93,7 @@ function loadProject() {
             // if there's a repo link, create a GitHub icon that links to it. Otherwise, leave it blank.
             repoHTML = '';
             if(projData.repo) {
-                repoHTML = `<a href="${projData.repo}" target="_blank"><img src="/_branding/github-icon.jpg" alt="GitHub" width="64" height="64"></a>`;
+                repoHTML = `<a href="${projData.repo}" target="_blank"><img src="/_branding/Logos/GithubLogo.svg" alt="GitHub" width="64" height="64"></a>`;
             }
 
             // for gallery images and previs, we do the same thing as the main media, but we also wrap them in a div with a class of galleryItem and add an overlay with the alt text. 
@@ -143,7 +143,7 @@ function loadProject() {
             container.innerHTML = `
                 <div class="projectHeader">
                     <h2 >${projData.title}</h2>
-                    <p class="date">${projData.date}</p>
+                    <h2 class="date">${projData.date}</p>
                 </div>
                 ${repoHTML}
 
