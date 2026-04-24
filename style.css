@@ -43,7 +43,7 @@ main {
   margin: 0 auto;
 
   border: var(--border-container) solid var(--text-main);
-  padding: 1.5rem;
+  padding: 1rem;
 
   
   overflow: visible !important;
@@ -54,7 +54,7 @@ main {
 /* if the screen's width is wider than 900px (more than a phone basically) scale the main to 75% of screen. */
 @media (min-width: 900px) {
   main {
-    width: 75%;
+    width: 100%;
   }
 }
 
@@ -70,7 +70,7 @@ body {
 /* socials bar at footer, makes it stick to flexbox */
 .socials {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -90,9 +90,9 @@ body {
 
 @media (min-width: 900px) {
   .contentMain {
-    max-width: 75%;
-    margin: 1rem auto;
-    padding: 2rem;
+    max-width: 80%;
+    margin: .5rem auto;
+    padding: .5rem;
   }
 }
 /* fairly obvious, lmk if you need this marked */
@@ -145,6 +145,11 @@ section {
 /* Logo Image Class */
 .logo {
   height: 64px;
+  width: auto;
+}
+
+.logo.titleLogo {
+  height: 48px
 }
 
 /* Gap Class */
@@ -156,7 +161,7 @@ section {
 .seperator {
   height: 4px;
   background: var(--text-main);
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .fitImg {
@@ -169,15 +174,15 @@ section {
 /* Header Title Class */
 .headerTitle {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   text-align: center;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   
-  gap: 1rem;
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
+  gap: 0.5rem;
+  padding: 0rem 0rem;
+  margin: 0rem;
   
   list-style: none;
   /*border: 0.125rem solid green;*/
@@ -186,6 +191,7 @@ section {
   .headerTitle {
     flex-direction: row;
     justify-content: flex-start;
+    align-items: baseline;
     text-align: left;
   }
 }
@@ -197,8 +203,8 @@ section {
 }
 
 .headerTitle h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-size: 1rem;
+  margin: .5rem;
 }
 
 .headerTitle h2 {
@@ -235,7 +241,7 @@ section {
 
 /* Navigation Link Class */
 .navLinks {
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
   
   border: var(--border-container) solid var(--text-main);
@@ -246,16 +252,16 @@ section {
 .navLinks li {
   
   border: none;
-  padding: 1rem;
-  /* background-color: black; */
+  padding: 0 0;
+    /* background-color: black; */
 }
 
 .navLinks a {
   text-decoration: none;
   color: white;
   border: var(--border-container) solid var(--text-main);
-  padding: 1em;
   font-family: var(--font-subheader);
+  font-size: 1.5rem
 }
 
 .navLinks a:hover {
@@ -558,7 +564,7 @@ section {
   justify-content: center;
   width: 100%;
   text-align: center;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
   color: var(--text-main);
   text-decoration: none;
 
@@ -577,11 +583,18 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  margin: 0 1rem;
+
+  font-family: var(--font-buttons);
+  font-size: 1.2rem;
+  color: var(--text-main)
+  
+  
 }
 /* makes footer all in one row, copyright, email, socials */
 .footerContent p:first-child {
   text-align: left;
+
 }
 .footer-center {
   text-align: center;
