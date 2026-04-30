@@ -234,8 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.addEventListener('click', (e) => {
         const img = e.target.closest ('img[data-lightbox]');
-        console.log('clicked element:', e.target);
-        console.log('clicked', img.getAttribute('src'));
         if(!img) return;
         openLightbox(img.getAttribute('src'));
         
