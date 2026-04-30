@@ -1,0 +1,32 @@
+{
+    "title": "Nanofab Lab Training Sim",
+    "date": "2026",
+
+    "thumb": {
+        "type": "image",
+        "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
+    },
+
+    "description": "Team Project - Demo for a Digital Twin and Training Simulator for Rochester Institute of Technology's Semiconductor Nanofabrication Lab.",
+
+    "gallery": [
+        {
+            "type": "video",
+            "src": "ObjectDemo.mp4"
+        },
+        {
+            "type": "image",
+            "src": "BPGame.png"
+        },
+        {
+            "type": "image",
+            "src": "BPObject.png"
+        }
+    ],
+    "previs": [],
+    "process": "The Semiconductor Nanofabrication Lab (SNL) Training Demo focuses soley on the Gowning portion, wherein the user has to gown themselves in a specialized clean-suit in order to enter the Lab. Assembled and built in Unreal 5.7, I developed all the blueprint logic involved, with systems such as the Interactable Objects/Highlights, Equippable Objects tracked in an array, Interactable Doors, User Error Detection for wrong gowning order, room state, and airlock status, as well as general Gamemode/Gamestate management, Building & Shipping executable for windows, ect."
+}

@@ -1,0 +1,49 @@
+{
+    "title": "Orbital Miner",
+    "date": "2024",
+
+    "thumb": {
+        "type": "image",
+        "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
+    },
+
+    "description": "Game ready asset, concept for an Orbital Laser Mining Canon.",
+
+    "gallery": [
+        {
+            "type": "video",
+            "src": "Alt0.mp4"
+        },
+        {
+            "type": "image",
+            "src": "Alt1.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt2.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt3.png"
+        }
+    ],
+    "previs": [
+        {
+            "type": "image",
+            "src": "Progress1.png"
+        },
+        {
+            "type": "image",
+            "src": "Progress2.png"
+        },
+        {
+            "type": "image",
+            "src": "Progress3.png"
+        }
+    ],
+    "process": "Designed to mine hard metals on the surface of a planet below, the Orbital Canon collects the debris into tubes on the side using an electromagnet located below. Fully Baked Normals & AO map in final model."
+}

@@ -1,0 +1,32 @@
+{
+    "title": "Waste Water Treatment",
+    "date": "2026",
+
+    "thumb": {
+        "type": "image",
+        "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
+    },
+
+    "description": "Team Project - 3D Visualization for an Electro-Reactive Waste Water Treatment system.",
+
+    "gallery": [
+        {
+            "type": "video",
+            "src": "MicroVisWIP.mp4"
+        },
+        {
+            "type": "image",
+            "src": "NodeGraph.png"
+        },
+        {
+            "type": "image",
+            "src": "BlenderViewport.png"
+        }
+    ],
+    "previs": [],
+    "process": "The Waste Water Treatment Visualization had a relatively quick turnaround, so it was rendered entirely in Blender Cycles. I specifically worked on the Preivs/Animatic, and created the Microscopic Molecule Visualization, making a Geo-Node setup to scatter particles and simulate the heavy metals' attraction to the Carbon Atoms. To do this, I offset the heavy metals using a vector volume representing velocity/attraction to the Carbon Molecules. I generated this volume with the Gradient Vector on the signed distance to each Carbon Atom. The molecule shader itself was a simple Fresnel and Transluscent Refraction, colored and animated to represent polarity."
+}

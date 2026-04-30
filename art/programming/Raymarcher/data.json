@@ -1,0 +1,39 @@
+{
+    "title": "PBR Raymarcher",
+    "date": "2025",
+
+    "thumb": {
+        "type": "image",
+        "src": "Alt1.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
+    },
+
+    "repo": "https://www.shadertoy.com/view/W3yfDW",
+    "description": "Interactible Physically Based Renderer programmed from scratch on Shadertoy in glsl, utilizes Raymarching to generate GBuffer lighting info for Signed Distance Fields.",
+
+    "gallery": [
+        {
+            "type": "image",
+            "src": "Alt2.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt3.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt4.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt5.png"
+        }
+    ],
+    "previs": [
+
+    ],
+    "process": "The Renderer utilizes Signed Distance Fields to generate the GBuffer maps such as Depth, Object ID, Alpha, UV, and Position, with Normal generated VIA the Gradient on the surface. From there it maps roughness and metalic textures onto the surface based on material/object ID, and uses GGX in a lighting loop to light the surface."
+}

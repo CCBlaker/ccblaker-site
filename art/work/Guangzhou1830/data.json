@@ -1,0 +1,41 @@
+{
+    "title": "Guangzhou 1830",
+    "date": "2026",
+
+    "thumb": {
+        "type": "image",
+        "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
+    },
+
+    "description": "Solo Project - Modular Environment based on the 13 Factories and surrounding residential districts in Guangzhou, China during the early 19th century. Specifically 1830.",
+
+    "gallery": [
+        {
+            "type": "video",
+            "src": "RenderWipe.mp4"
+        },
+        {
+            "type": "image",
+            "src": "StructureKit.jpg"
+        },
+        {
+            "type": "image",
+            "src": "DetailKit.jpg"
+        }
+    ],
+    "previs": [
+        {
+            "type": "image",
+            "src": "Previs.png"
+        },
+        {
+            "type": "image",
+            "src": "Miro.png"
+        }
+    ],
+    "process": "The Environment was assembled and rendered in Unreal 5.7. I utilized a combination of effects such as simple sined World Position Offset with noise for elements like fabrics and flags, parallax occlusion mapping in combination with decals as well as materials to achieve depth and shadowing entirely within the shader, and material layering to create an art-directable layered gray brick and plaster effect as well as alpha layer blending for the building trims and street signs."
+}

@@ -1,0 +1,45 @@
+{
+    "title": "Misson Control Environment",
+    "date": "2024",
+
+    "thumb": {
+        "type": "image",
+        "src": "Thumbnail.png"
+    },
+    "main": {
+        "type": "video",
+        "src": "Main.mp4"
+    },
+
+    "description": "A Hypothetical retro-style Mission Control Launch center, modular Environment assembled and rendered in Unreal 5.7",
+
+    "gallery": [
+        {
+            "type": "image",
+            "src": "Alt1.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt2.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt3.png"
+        },
+        {
+            "type": "image",
+            "src": "Alt4.png"
+        }
+    ],
+    "previs": [
+        {
+            "type": "image",
+            "src": "Progress1.png"
+        },
+        {
+            "type": "image",
+            "src": "ConsoleConcepts.png"
+        }
+    ],
+    "process": ""
+}
