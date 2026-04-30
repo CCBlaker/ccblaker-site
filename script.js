@@ -103,7 +103,9 @@ function loadProject() {
                 galleryHTML = '<div class="gallery">';
                 projData.gallery.forEach(item => {
                     if(item.type === 'video') {
-                        galleryHTML += `<video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>`;
+                        galleryHTML += `<div class="galleryItem">
+                                            <video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>
+                                        </div>`;
                     } else {
                         galleryHTML += `
                             <div class="galleryItem">
@@ -124,7 +126,9 @@ function loadProject() {
 
                 projData.previs.forEach(item => {
                     if(item.type === 'video') {
-                        previsHTML += `<video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>`;
+                        previsHTML += `<div class="galleryItem">
+                                            <video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>
+                                        </div>`;
                     } else {
                         previsHTML += `
                             <div class="galleryItem">
