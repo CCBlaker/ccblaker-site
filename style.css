@@ -289,7 +289,7 @@ section {
   position: relative;
   overflow: hidden;
   min-width: 0px;
-  max-width: 500px;
+  max-width: 1000px;
   width: 100%;
   object-fit: cover;
   border: var(--border-container) solid var(--text-main);
@@ -360,7 +360,7 @@ section {
 /* thumbnail for projects div, each card has a thumbnail */
 .thumbnail {
   width: 100%;
-  height: 250px;
+  height: 500px;
   object-fit: cover;
   display: block;
   grid-column: 1 / -1;
@@ -368,7 +368,7 @@ section {
 }
 @media (max-width: 600px) {
   .thumbnail {
-    height: 180px;
+    height: 300px;
   }
 }
 
