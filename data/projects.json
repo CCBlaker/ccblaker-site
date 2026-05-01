@@ -7,22 +7,22 @@
                 {
                     "title": "Guangzhou 1830",
                     "slug": "Guangzhou1830",
-                    "path": "art/work/Guangzhou1830/"
+                    "path": "projects/work/Guangzhou1830/"
                 },
                 {
                     "title": "Mandelbulb",
                     "slug": "mandelbulb",
-                    "path": "art/work/Mandelbulb/"
+                    "path": "projects/work/Mandelbulb/"
                 },
                 {
                     "title":"Nanofab Training Sim",
                     "slug":"NanofabTrainingSim",
-                    "path":"art/work/NanofabTrainingSim/"
+                    "path":"projects/work/NanofabTrainingSim/"
                 },
                 {
                     "title":"Waste Water Treatment",
                     "slug":"WasteWaterTreatment",
-                    "path":"art/work/WasteWaterTreatment/"
+                    "path":"projects/work/WasteWaterTreatment/"
                 }
             ]
         },
@@ -33,7 +33,7 @@
                 {
                     "title": "PBR Raymarcher",
                     "slug": "Raymarcher",
-                    "path": "art/programming/Raymarcher/"
+                    "path": "projects/programming/Raymarcher/"
                 }
             ]
         },
@@ -44,12 +44,12 @@
                 {
                     "title": "Mission Control",
                     "slug": "MissionControl",
-                    "path": "art/sketchbook/MissionControl/"
+                    "path": "projects/sketchbook/MissionControl/"
                 },
                 {
                     "title": "Orbital Miner",
                     "slug": "OrbitalMiner",
-                    "path": "art/sketchbook/OrbitalMiner/"
+                    "path": "projects/sketchbook/OrbitalMiner/"
                 }
             ]
         },
@@ -60,7 +60,7 @@
                 {
                     "title": "templates",
                     "slug": "temp",
-                    "path": "art/templates/temp/"
+                    "path": "projects/templates/temp/"
                 }
             ]
         }

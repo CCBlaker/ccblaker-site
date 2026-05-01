@@ -1,0 +1,93 @@
+/* main is the element containing most of the elements, check any of the main pages to see. */
+main {
+  /* the width is the width. easy. takes up 100% of the screen. */
+  width: 100%;
+  margin: 0 auto;
+
+  border: var(--border-container) solid var(--text-main);
+  padding: 1rem;
+
+  
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  flex: none;
+}
+/* if the screen's width is wider than 900px (more than a phone basically) scale the main to 75% of screen. */
+@media (min-width: 900px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* sets colors */
+body {
+  background: var(--bg-accent);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* main project container, sticks with main to scale on size */
+.contentMain {
+  /* border: var(--border-outer) solid var(--text-main); */
+  padding: 0.75rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  background: var(--bg-main)
+}
+
+@media (min-width: 900px) {
+  .contentMain {
+    max-width: 90%;
+    margin: .5rem auto;
+    padding: .5rem;
+  }
+}
+
+/* General Classes */
+
+header h1 {
+  font-family: var(--font-header);
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+header h2 {
+  font-family: var(--font-subheader);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Logo Image Class */
+.logo {
+  height: 64px;
+  width: auto;
+}
+
+.logo.titleLogo {
+  height: 48px
+}
+
+/* Gap Class */
+.spacer {
+  margin-bottom: 0.5rem;
+}
+
+/* Line Seperator Class */
+.seperator {
+  height: 4px;
+  background: var(--text-main);
+  margin: 1rem 0;
+}
+
+.fitImg {
+  object-fit: contain;
+  width: 100%;
+}

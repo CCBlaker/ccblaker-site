@@ -1,0 +1,303 @@
+/* each project image goes in here! */
+.card {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+  min-width: 0px;
+  max-width: 1000px;
+  width: 100%;
+  object-fit: cover;
+  border: var(--border-container) solid var(--text-main);
+  background: var(--bg-main);
+  margin: 0;
+  align-self: start;
+  flex-grow: 1;
+}
+
+.card a {
+  width: 100%;
+}
+.card.small {
+  grid-column: span 1;
+}
+.card.medium {
+  grid-column: span 2;
+}
+.card.large {
+  grid-column: span 3;
+}
+
+/* evens things out on small screens */
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .card.small, .card.medium, .card.large {
+    grid-column: span 1;
+  }
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/* big projects div, all the cards/projects go in here! */
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: start;
+  overflow: visible !important;
+  height: auto !important;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+/* #project {
+  border: var(--border-container) solid var(--text-main); */
+  /* padding: 2rem;
+} */
+
+/* project name on project page */
+#project h1 {
+  font-family: var(--font-header);
+  font-size: 3rem;
+}
+
+/* date on project page */
+.date {
+  font-family: var(--font-subheader);
+  color: var(--text-muted);
+}
+
+/* thumbnail for projects div, each card has a thumbnail */
+.thumbnail {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  grid-column: 1 / -1;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 600px) {
+  .thumbnail {
+    height: 300px;
+  }
+}
+
+/* for project page */
+.thumb {
+  width:100%;
+  height: auto;
+  display: block;
+}
+
+/* magic things. */
+/* this is what shows up when you hover a project image */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+  
+  /* color: white; */
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* text that shows up on overlay */
+.overlayText {
+  padding: 1rem;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.overlayText h3 {
+  font-family: var(--font-subheader);
+  margin-bottom: 0.3rem;
+}
+
+/* on hover: make appear */
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover .overlayText{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* flashy zoom and dim */
+.card:hover .thumbnail {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* main project image div on project page */
+.mainMedia {
+  border: var(--border-inner) solid var(--text-main);
+  margin: 0;
+  padding: 0.5rem;
+}
+
+/* spotlight image/video or whatever */
+.mainMedia img, 
+.mainMedia video {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  display:block;
+  object-fit: contain;
+}
+
+/* gallery and previs are the divs holding populated images */
+.gallery, .previs {
+  column-count: 2;
+  column-gap: 1rem;
+  /* display: grid;
+  grid-template-columns: repeat(2,1fr); */
+  column-fill: balance;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* the images! they fit in twooooo columns  */
+.gallery img,
+.gallery video,
+.previs img,
+.previs video {
+  width: 100%;
+  height:auto;
+  display:block;
+  break-inside: avoid;
+  object-fit: cover;
+  border: var(--border-inner) solid var(--text-main);
+}
+
+/* everything in gallery and previs has a lower margin but that's it, this lets them fit against each other. */
+/* REMEMBER THAT SHITTY PROBLEM WITH GAPS? THIS SOLVES IT. DON"T TOUCH IT */
+.gallery > *,
+.previs > * {
+  margin: 0 0 1rem 0;
+}
+
+@media (max-width: 600px) {
+  .gallery, .previs {
+    column-count: 1;
+  }
+}
+
+.galleryItem, 
+.previs .galleryItem {
+  position: relative;
+  overflow: hidden;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+.galleryItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Magic shit don't touch. mostly the same with project overlay. this is not JUST gallery overlay, it's also previs */
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+
+
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galleryText {
+  padding: 0.75rem;
+  color: var(--text-main);
+  font-family: var(--font-body);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+.galleryText:empty {
+  display: none;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.05);
+}
+/* AS LONG AS THE ITEM HAS ALT TEXT dim the image to see text */
+.galleryItem:has(.galleryText:not(:empty)):hover img {
+  filter: brightness(0.8);
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryItem:hover .galleryText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process {
+  margin-top: 2rem;
+  border-top: var(--border-container) solid var(--text-main);
+  padding-top: 1rem;
+}
+
+*, *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
+ /* DONT TOUCH THIS. */
+ #lightbox {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+  cursor: zoom-out;
+ }
+
+ #lightbox img {
+   max-width: 90%;
+   max-height: 90%;
+   object-fit: contain;
+ }
+
+ /* makes cursor the little magnifying glass <3 cute */
+ .thumb, 
+ .mainMedia img, 
+ .galleryItem img {
+  cursor: zoom-in;
+ }

@@ -6,43 +6,44 @@
   <!-- Makes rem/em + mobile behave properly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CCB - Sketchbook</title>
+  <title>CCB - Contact</title>
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/ivu1yzf.css">
   <link rel="icon" type="image/png" href="/_branding/logo_onblack.svg">
 </head>
+
 <body>
+  
 <div class="contentMain">
 
   <!-- Header -->
-  
+   
   <!-- Main -->
   <main class="itemMain">
-  <header id="navbar"></header>
-    <h3 class="centered">Collections of Old and/or Work in Progress pieces</h3>
-
-    <div class="centered">
-      <div id = "projects"></div>
+    <header id="navbar"></header>
+    
+    <div class="canvasContainer">
+      <canvas id="shaderCanvas" class="shaderCanvas"></canvas>
+      <script src="initCanvas.js"></script>
     </div>
     
-    
     <div id="footer"></div>
-    
+ 
   </main>
 
-  <!-- Footer -->
-  
-  <script src="/script.js" defer></script>
+<!-- Footer -->
+
+</div>
+<script src="/script.js" defer></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         loadComponent('navbar','/components/navbar.html');
         loadComponent('footer', '/components/footer.html');
-        loadCategory('sketchbook');
+        
       });
-    </script>
-</div>
+</script>
 </body>
 
 </html>
