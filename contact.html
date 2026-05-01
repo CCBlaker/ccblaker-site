@@ -27,12 +27,21 @@
     <div>
 
       <h1>About Me</h1>
-      <p>Hi, My name is Charlie Blaker, and I'm a 3D Technical/Shader Artist for Environments!
-        I work a lot in Unreal Engine but I have a  good amount of general 3D pipeline skills with a whole jumble of coding and technical knowledge as well! </p>
-        
-      <p>I really enjoy math, so naturally, my favorite thing to work on is definitely shaders. Whether it be visual scripting in Unreal or Blender, or coding directly in a shader language,
-        the technical problem solving combined with the artistic direction really appeals to my brain. I like to go off on a lot of tangents and end up following whatever technical rabbit hole grabs my interest first.
-        (Often regardless of whether or not that rabbit hole will be useful...).</p>
+      <ul class = "contentBox">
+        <li>
+          <p>Hi, My name is Charlie Blaker, and I'm a 3D Technical/Shader Artist for Environments!
+            I work a lot in Unreal Engine but I have a  good amount of general 3D pipeline skills with a whole jumble of coding and technical knowledge as well! </p>
+            
+          <p>I really enjoy math, so naturally, my favorite thing to work on is definitely shaders. Whether it be visual scripting in Unreal or Blender, or coding directly in a shader language,
+            the technical problem solving combined with the artistic direction really appeals to my brain. I like to go off on a lot of tangents and end up following whatever technical rabbit hole grabs my interest first.
+            (Often regardless of whether or not that rabbit hole will be useful...).</p>
+        </li>
+        <li>
+          <object data="_branding/Resume.pdf" type="application/pdf" width="100%" height="500px">
+            <p>Unable to display PDF file. <a href="_branding/Resume.pdf">Download instead</a>.</p>
+          </object>
+        </li>
+      </ul>
 
       <div class="seperator"></div>
 
@@ -53,8 +62,6 @@
       </div>
       <h4>whoah cool fractal <img src="_sample/boarExplode.png" alt="boar" width="20"></h4>
 
-
-      
     </div>
     
     <div id="footer"></div>
@@ -69,7 +76,6 @@
       document.addEventListener('DOMContentLoaded', () => {
         loadComponent('navbar','/components/navbar.html');
         loadComponent('footer', '/components/footer.html');
-        
       });
 </script>
 </body>

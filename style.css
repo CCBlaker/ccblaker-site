@@ -184,7 +184,20 @@ section {
   width: 100%;
 }
 
+.contentBox {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
 
+.contentBox li {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  max-width: 50%;
+}
 
 /* Header Title Class */
 .headerTitle {
