@@ -1,4 +1,24 @@
 
+// Checks if a src is a YouTube link 
+function isYouTube(src) { 
+    return src.includes('youtube.com') || src.includes('youtu.be'); 
+} 
+// Converts a YouTube link into an embed link 
+function getYouTubeEmbed(src) { 
+    let videoId = ''; 
+
+    if(src.includes('youtu.be')) { 
+        videoId = src.split('youtu.be/')[1].split('?')[0]; 
+
+    } else if(src.includes('youtube.com/watch')) { 
+        videoId = new URL(src).searchParams.get('v'); 
+
+    } else if(src.includes('youtube.com/embed/')) { 
+        videoId = src.split('youtube.com/embed/')[1].split('?')[0]; 
+    } 
+
+    return `https://www.youtube.com/embed/${videoId}`; }
+
 // Called on category page to load projects for that category
 function loadCategory(categorySlug) {
     // Fetch the projects data (from data/projects.json) and find the category with the matching slug
@@ -15,17 +35,27 @@ function loadCategory(categorySlug) {
                   .then(projData => {
                     const div = document.createElement('div'); //makes main holder for the card, which will be resized to fit the image
 
-                    const mediaPath = '/' + project.path + projData.thumb.src;
+                    const mediaPath = isYouTube(projData.thumb.src)
+                        ? getYouTubeEmbed(projData.thumb.src)
+                        : '/' + project.path + projData.thumb.src;
 
                     const sizes = ['small', 'medium', 'small','medium','large']; //dumb thing to ensure variety 
                     const size = sizes[Math.floor(Math.random() * sizes.length)];
                     
                     //actual html for the card. The image is loaded first, then the card is resized to fit it. This prevents the grid from breaking when images of different sizes are loaded in.
+                    let thumbHTML = '';
+
+                    if(isYouTube(projData.thumb.src)) {
+                        thumbHTML = `<iframe src="${mediaPath}" class="thumbnail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+                    } else {
+                        thumbHTML = `<img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>`;
+                    }
+
                     div.innerHTML = `
                         <div class="card ${size}">
                             <a href="/project.html?proj=${project.slug}">
 
-                                <img src="${mediaPath}" alt="${projData.title}" class="thumbnail"/>
+                                ${thumbHTML}
 
                                 <div class="overlay">
                                     <div class="overlayText">
@@ -41,9 +71,10 @@ function loadCategory(categorySlug) {
                     `;
                     //add the card to the container, then find the image inside it and add an onload listener to resize the card once the image is loaded
                     container.appendChild(div);
+                    
+                    const media = div.querySelector('.thumbnail');
 
-                    const img = div.querySelector('img');
-                    img.onload = () => {
+                    media.onload = () => {
                         requestAnimationFrame(() => resizeGridItem(div));
                     };
                   });
@@ -84,7 +115,9 @@ function loadProject() {
 
             let mediaHTML = '';
             //media handling. If it's a video, create a video element, otherwise create an image element. This is for the main media at the top of the project page, not the gallery/previs items further down.
-            if(projData.main.type === 'video') {
+            if(isYouTube(projData.main.src)) {
+                mediaHTML = `<iframe src="${getYouTubeEmbed(projData.main.src)}" class="thumb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+            } else if(projData.main.type === 'video') {
                 mediaHTML = `<video controls autoplay src="${basePath + projData.main.src}" alt="${projData.main.alt || ''}"/>`;
             } else {
                 mediaHTML = `<img src="${basePath + projData.main.src}" class="thumb" data-lightbox />`;
@@ -102,7 +135,11 @@ function loadProject() {
             if (projData.gallery && projData.gallery.length > 0) {
                 galleryHTML = '<div class="gallery">';
                 projData.gallery.forEach(item => {
-                    if(item.type === 'video') {
+                    if(isYouTube(item.src)) {
+                        galleryHTML += `<div class="galleryItem">
+                                            <iframe src="${getYouTubeEmbed(item.src)}" class="thumb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>`;
+                    } else if(item.type === 'video') {
                         galleryHTML += `<div class="galleryItem">
                                             <video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>
                                         </div>`;
@@ -125,7 +162,11 @@ function loadProject() {
                 previsHTML = '<div class="previs">';
 
                 projData.previs.forEach(item => {
-                    if(item.type === 'video') {
+                    if(isYouTube(item.src)) {
+                        previsHTML += `<div class="galleryItem">
+                                            <iframe src="${getYouTubeEmbed(item.src)}" class="thumb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>`;
+                    } else if(item.type === 'video') {
                         previsHTML += `<div class="galleryItem">
                                             <video controls src="${basePath + item.src}" alt="${item.alt || ''}"/>
                                         </div>`;

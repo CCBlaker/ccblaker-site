@@ -392,6 +392,13 @@ section {
   display: block;
 }
 
+iframe.thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+}
+
 /* magic things. */
 /* this is what shows up when you hover a project image */
 .overlay {
