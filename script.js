@@ -115,6 +115,7 @@ function loadProject() {
 
             let mediaHTML = '';
             //media handling. If it's a video, create a video element, otherwise create an image element. This is for the main media at the top of the project page, not the gallery/previs items further down.
+            //Supports Youtube videos, change type if youtube link
             if(isYouTube(projData.main.src)) {
                 mediaHTML = `<iframe src="${getYouTubeEmbed(projData.main.src)}" class="thumb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
             } else if(projData.main.type === 'video') {
