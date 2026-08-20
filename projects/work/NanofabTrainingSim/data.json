@@ -8,7 +8,7 @@
     },
     "main": {
         "type": "video",
-        "src": "Main.mp4"
+        "src": "https://www.youtube.com/watch?v=Uo5TAJFN1u4"
     },
 
     "description": "Team Project - Demo for a Digital Twin and Training Simulator for Rochester Institute of Technology's Semiconductor Nanofabrication Lab.",

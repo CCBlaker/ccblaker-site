@@ -23,6 +23,11 @@
                     "title":"Waste Water Treatment",
                     "slug":"WasteWaterTreatment",
                     "path":"projects/work/WasteWaterTreatment/"
+                },
+                {
+                    "title":"Beneath The Permafrost",
+                    "slug":"BeneathThePermafrost",
+                    "path":"projects/work/BeneathThePermafrost/"
                 }
             ]
         },
